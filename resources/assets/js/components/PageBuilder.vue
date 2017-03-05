@@ -50,7 +50,7 @@
                             </div>
 
                             <div v-show="part.type=='text'">
-                                
+                                <ckeditor v-model="content[part.id]" :id="editors[part.id]" :height="'300px'" :toolbar="[['Format']]"></ckeditor>
                             </div>
                     </div>
                 </draggable>
@@ -124,9 +124,12 @@
 
 <script>
     import draggable from 'vuedraggable'
+    import Ckeditor from './ckeditor'
+
     export default {
         components: {
-            draggable
+            draggable,
+            ckeditor: Ckeditor
         },
         ready() {
             console.log('Component ready.')
@@ -139,6 +142,8 @@
                     {name: "Image", id: 2, icon: 'fa fa-file-image-o', type: 'image'},
                     {name: "LTI Tool", id: 3, icon: 'fa fa-wrench', type: 'lti'}
                 ],
+                editors: [],
+                content: [],
                 isDraggedOver: false,
                 isDraggedOverImage: false,
                 files: []
@@ -154,6 +159,11 @@
             drop (e) {
                 this.leave();
                 console.log('e', e);
+//                CKEDITOR.disableAutoInline = true;
+//
+//                $('.ckeditor').each(function () {
+//                    CKEDITOR.inline($(this).id);
+//                });
             },
             enterImage () {
                 this.isDraggedOverImage = true

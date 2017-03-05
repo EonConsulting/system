@@ -16,6 +16,8 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
-    "cross-env": "^3.2.3"
+    "cross-env": "^3.2.3",
+    "vue-ckeditor": "^1.0.0",
+    "vue-ckeditor2": "^1.0.3"
   }
 }
