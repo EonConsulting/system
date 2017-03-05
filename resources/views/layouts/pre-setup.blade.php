@@ -27,6 +27,12 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+
     @yield('custom-styles')
 </head>
 <body class="hold-transition skin-blue-light sidebar-mini @yield('body-class')">
