@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         // check if user has any roles, if not
-        return view('landing.todo');
+//        return view('landing.todo');
 
         // else
         return view('admin.dashboards.dashboard');

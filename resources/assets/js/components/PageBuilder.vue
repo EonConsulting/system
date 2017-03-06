@@ -79,7 +79,14 @@
         width: 100%;
         min-height: 50px;
         padding: 50px;
+    }
+
+    .part:odd {
         background-color: #e7e7e7;
+    }
+
+    .part:even {
+        background-color: #f7f7f7;
     }
 
     .part-no-style {
