@@ -474,7 +474,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.3.11
         </div>
-        <strong>Copyright &copy; 2016 <a href="http://www.unisa.ac.za">University of South Africa</a>.</strong> All rights
+        <strong>Copyright &copy; {{ date('Y') }} <a href="http://www.unisa.ac.za" target="_blank">University of South Africa</a>.</strong> All rights
         reserved.
     </footer>
 
