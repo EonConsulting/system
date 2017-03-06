@@ -174,6 +174,10 @@ return [
         Creativeorange\Gravatar\GravatarServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
+        \EONConsulting\LaravelLTI\LaravelLTIServiceProvider::class,
+        \EONConsulting\RolesPermissions\RolesPermissionsServiceProvider::class,
+        \EONConsulting\AppStore\AppStoreServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -182,6 +186,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        \App\Providers\ViewComposerServiceProvider::class,
 
     ],
 
@@ -238,6 +243,9 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'LaravelLTI' => \EONConsulting\LaravelLTI\Facades\LaravelLTI::class,
+        'RolePermission' => \EONConsulting\RolesPermissions\Facades\RolesPermissions::class,
+        'AppStore' => \EONConsulting\AppStore\Facades\AppStore::class,
     ],
 
 ];
