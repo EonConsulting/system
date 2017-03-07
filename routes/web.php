@@ -18,4 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/builders/page', ['as' => 'builders.page', 'uses' => 'Builders\\PageBuilderController@index']);
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/builders/page', ['as' => 'builders.page', 'uses' => 'Builders\\PageBuilderController@index']);
+});
+
+Route::match(['get', 'post'], '/eon/lti/test', 'TestLTIController@index');

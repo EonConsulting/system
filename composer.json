@@ -13,7 +13,8 @@
         "spatie/laravel-fractal": "^3.5",
         "laravelcollective/html": "^5.3.0",
         "creativeorange/gravatar": "~1.0",
-        "intervention/image": "^2.3"
+        "intervention/image": "^2.3",
+        "IMSGlobal/LTI" : "^3.0.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
