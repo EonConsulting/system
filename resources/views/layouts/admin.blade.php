@@ -337,16 +337,25 @@
             <ul class="sidebar-menu">
                 <li class="header">MAIN NAVIGATION</li>
 
-
-
-
-                <li>
+                <li class="{{ (Route::currentRouteName() == 'home') ? 'active' : '' }}">
                     <a href="{{ url('/home') }}">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                        <span class="pull-right-container">
-
-            </span>
+                        <span class="pull-right-container"></span>
                     </a>
+                </li>
+                <li class="treeview {{ (Route::currentRouteName() == 'eon.admin.groups' || Route::currentRouteName() == 'eon.admin.permissions' || Route::currentRouteName() == 'eon.admin.roles' || Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}">
+                    <a href="#">
+                        <i class="fa fa-legal"></i> <span>Roles and Permissions</span>
+                        <span class="pull-right-container">
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{{ (Route::currentRouteName() == 'eon.admin.groups') ? 'active' : '' }}"><a href="{{ route('eon.admin.groups') }}"><i class="fa fa-circle-o"></i> Groups</a></li>
+                        <li class="{{ (Route::currentRouteName() == 'eon.admin.permissions') ? 'active' : '' }}"><a href="{{ route('eon.admin.permissions') }}"><i class="fa fa-circle-o"></i> Permissions</a></li>
+                        <li class="{{ (Route::currentRouteName() == 'eon.admin.roles') ? 'active' : '' }}"><a href="{{ route('eon.admin.roles') }}"><i class="fa fa-circle-o"></i> Roles</a></li>
+                        <li class="{{ (Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}"><a href="{{ route('eon.admin.roles.users') }}"><i class="fa fa-circle-o"></i> Users</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="pages/examples/default-page.html">
