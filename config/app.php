@@ -177,6 +177,7 @@ return [
         \EONConsulting\LaravelLTI\LaravelLTIServiceProvider::class,
         \EONConsulting\RolesPermissions\RolesPermissionsServiceProvider::class,
         \EONConsulting\AppStore\AppStoreServiceProvider::class,
+        \EONConsulting\FileManager\FileManagerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -246,6 +247,7 @@ return [
         'LaravelLTI' => \EONConsulting\LaravelLTI\Facades\LaravelLTI::class,
         'RolePermission' => \EONConsulting\RolesPermissions\Facades\RolesPermissions::class,
         'AppStore' => \EONConsulting\AppStore\Facades\AppStore::class,
+        'FileManager' => \EONConsulting\FileManager\Facades\FileManager::class,
     ],
 
 ];
