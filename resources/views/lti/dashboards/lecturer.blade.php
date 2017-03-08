@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.lti')
 
 @section('site-title')
     Lecturer | Dashboard
@@ -10,6 +10,10 @@
 
 @section('body-class')
 
+@endsection
+
+@section('user-image')
+/dist/img/user3-128x128.jpg
 @endsection
 
 @section('mini-logo-title')
