@@ -14,8 +14,8 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 ini_set('display_errors', 0);
 
 // Development
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 /*============================ General Settings =======================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html
@@ -32,8 +32,8 @@ $config['authentication'] = function () {
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = env('CKFINDER_LICENSE_NAME', 'localhost');
-$config['licenseKey']  = env('CKFINDER_LICENSE_KEY', 'J2Y2-9NWL-2SCA-W3LY-346S-4MC8-N8QJ');
+$config['licenseName'] = 'localhost';
+$config['licenseKey']  = 'J2Y2-9NWL-2SCA-W3LY-346S-4MC8-N8QJ';
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
@@ -67,9 +67,8 @@ $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
 //    'baseUrl'      => '/ckfinder/userfiles/',
-//    'baseUrl'      => '/ckfinder/userfiles/',
-    'baseUrl'      => 'http://localhost/EON/system/public/vendor/storyline/core/',
-    'root'         => '/Applications/MAMP/htdocs/EON/system/public/vendor/storyline/core/', // Can be used to explicitly set the CKFinder user files directory.
+    'baseUrl'      => '/EON/system/public/vendor/storyline/core/',
+//  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
     'filesystemEncoding' => 'UTF-8',
@@ -139,7 +138,7 @@ $config['forceAscii'] = false;
 $config['xSendfile'] = false;
 
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_debug
-$config['debug'] = false;
+$config['debug'] = true;
 
 /*==================================== Plugins ========================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_plugins
