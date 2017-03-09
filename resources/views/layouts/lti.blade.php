@@ -98,7 +98,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="pages/examples/profile.html" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="{{ route('lti.users.profile') }}" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="pages/examples/login.html" class="btn btn-default btn-flat">Sign out</a>
@@ -147,6 +147,13 @@
                 <li class="{{ (Route::currentRouteName() == 'lti.dashboards') ? 'active' : '' }}">
                     <a href="{{ url('/home') }}">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
+
+                <li class="{{ (Route::currentRouteName() == 'lti.users.profile') ? 'active' : '' }}">
+                    <a href="{{ route('lti.users.profile') }}">
+                        <i class="fa fa-dashboard"></i> <span>Profile</span>
                         <span class="pull-right-container"></span>
                     </a>
                 </li>

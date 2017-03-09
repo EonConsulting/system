@@ -29,4 +29,8 @@ Route::group(['prefix' => '/lti', 'middleware' => ['auth'], 'namespace' => 'LTI'
     Route::group(['namespace' => 'Dashboards'], function() {
         Route::match(['get', 'post'], '/', ['as' => 'lti.dashboards', 'uses' => 'DashboardLTIController@index']);
     });
+    Route::group(['namespace' => 'Users'], function() {
+        Route::match(['get', 'post'], '/profile', ['as' => 'lti.users.profile', 'uses' => 'ProfileLTIController@index']);
+        Route::match(['get', 'post'], '/profile/update', ['as' => 'lti.users.profile.update', 'uses' => 'ProfileLTIController@update']);
+    });
 });
