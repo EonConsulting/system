@@ -96,6 +96,12 @@
                         <span class="pull-right-container"></span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('builders.storyline') }}">
+                        <i class="fa fa-arrows"></i> <span>Storyline Builder</span>
+                        <span class="pull-right-container"></span>
+                    </a>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -129,7 +135,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.3.11
         </div>
-        <strong>Copyright &copy; 2016 <a href="http://www.unisa.ac.za">University of South Africa</a>.</strong> All rights
+        <strong>Copyright &copy; {{ date('Y') }} <a href="http://www.unisa.ac.za">University of South Africa</a>.</strong> All rights
         reserved.
     </footer>
 

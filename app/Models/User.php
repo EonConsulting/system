@@ -27,4 +27,8 @@ class User extends Authenticatable
         return (bool) $this->lti->where('lti_user_id', $user_id)->count();
     }
 
+    public function hasLtiContext($context_id) {
+        return $this->lti->where('context_id', $context_id);
+    }
+
 }

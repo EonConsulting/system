@@ -31,13 +31,17 @@
             "Tsugi\\": "packages/laravel-lti/vendor/tsugi/lib/src/",
             "EONConsulting\\RolesPermissions\\": "packages/roles-permissions/src/",
             "EONConsulting\\AppStore\\": "packages/app-store/src/",
-            "EONConsulting\\FileManager\\": "packages/file-manager/src/"
+            "EONConsulting\\FileManager\\": "packages/file-manager/src/",
+            "EONConsulting\\Storyline\\Core\\": "packages/storyline-core/src/",
+            "EONConsulting\\PHPSaasWrapper\\": "packages/PHPSaasWrapper/src/"
         },
         "files": [
             "packages/laravel-lti/src/functions.php",
             "packages/roles-permissions/src/functions.php",
             "packages/app-store/src/functions.php",
-            "packages/file-manager/src/functions.php"
+            "packages/file-manager/src/functions.php",
+            "packages/storyline-core/src/functions.php",
+            "packages/PHPSaasWrapper/src/Http/helpers.php"
         ]
     },
     "autoload-dev": {

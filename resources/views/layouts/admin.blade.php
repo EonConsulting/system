@@ -29,7 +29,7 @@
 
     @yield('custom-styles')
 </head>
-<body class="hold-transition skin-blue-light sidebar-mini @yield('body-class')">
+<body class="hold-transition sidebar-mini skin-black @yield('body-class')">
 <div class="wrapper">
 
     <header class="main-header">

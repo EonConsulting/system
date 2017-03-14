@@ -15,6 +15,12 @@ require('./bootstrap');
 
 Vue.component('todo', require('./components/ToDo.vue'));
 Vue.component('page-builder', require('./components/PageBuilder.vue'));
+Vue.component('storyline-builder', require('./components/StorylineBuilder.vue'));
+
+Vue.component('block', require('./components/partials/block.vue'));
+Vue.component('item', require('./components/partials/item.vue'));
+Vue.component('groups', require('./components/partials/groups.vue'));
+Vue.component('group', require('./components/partials/group.vue'));
 
 const app = new Vue({
     el: '#app'
