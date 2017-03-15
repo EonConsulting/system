@@ -24,14 +24,13 @@
             </div>
         </div>
         <div class="col-md-10" @drop="dropped">
-            <groups :parts="parts" :current_tool="current_tool" :current_group="current_group" @updated="changeGroup"></groups>
+            <groups :parts="parts" :current_tool="current_tool" :cg="current_group" @update="upd" @updateGroups="updg"></groups>
         </div>
         <div class="clearfix"></div>
     </div>
 </template>
 
 <style>
-
     .main {
         --dragndrop-min-height: 400px;
         width: 100%;
@@ -39,56 +38,18 @@
         min-height: var(--dragndrop-min-height);
         position: relative;
     }
-
-    .dragndrop {
-        --dragndrop-min-height: 50px;
-        width: 100%;
-        min-height: var(--dragndrop-min-height);
-        background-color: #f8f8f8;
-        position: relative;
-        border: 3px dashed rgba(0, 0, 0, .2);
-    }
-
-    .dragndrop--dragged {
-        border-color: #333;
-    }
-
-    .dragndrop__input {
-        display: none !important;
-    }
-
-    .dragndrop__header {
-        display: block;
-        font-size: 1.1em;
-        color: #555;
-        vertical-align: middle;
-        text-align: center;
-        margin: calc(var(--dragndrop-min-height) / 2) 20px;
-    }
-
-    .dragndrop__header:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-
-    .dragndrop__header--compact {
-        margin: calc(var(--dragndrop-min-height) / 4) 20px;
-    }
 </style>
 
 <script>
     import draggable from 'vuedraggable'
-    import item from './partials/item'
-    import group from './partials/group'
     import groups from './partials/groups'
 
     export default {
         components: {
             draggable,
-            item,
-            group,
             groups
         },
+        props: ['group'],
         ready() {
             console.log('Component ready.')
         },
@@ -99,74 +60,56 @@
                     {name: "Group", id: 1, icon: 'fa fa-object-group', type: 'group'},
                     {name: "Content", id: 2, icon: 'fa fa-file-o', type: 'content'}
                 ],
-                content: [],
-                isDraggedOver: false,
-                isDraggedOverGroup: false,
-                dropped_in_droppable: false,
                 current_tool: false,
                 current_group: false,
-                files: []
+                dropping: false
             }
         },
         methods: {
-            enter () {
-                this.isDraggedOver = true
-            },
-            leave () {
-                this.isDraggedOver = false
-            },
-            drop (e) {
-                this.leave();
-                console.log('e', e);
-            },
-            enterGroup () {
-                this.isDraggedOverGroup = true
-            },
-            leaveGroup () {
-                this.isDraggedOverGroup = false
-            },
-            dropGroup (e) {
-                this.leaveGroup();
-                console.log('e', e);
-            },
-            showSingle(part) {
-                if(part.id == -1 && this.parts.length > 1) {
-                    return false;
-                }
-                return true;
-            },
             current_item(tool) {
-                console.log(tool);
+                console.log('current tool', tool);
                 this.current_tool = tool;
             },
             remove_tool(tool) {
-                this.dropped_in_droppable = false;
+                console.log('remove tool', tool);
                 this.current_tool = false;
             },
             dropped(e) {
+                console.log('e', e);
                 console.log('this.current_tool', this.current_tool);
-                console.log('e', e.target);
+                console.log('this.current_group', this.current_group);
 
-                if(!$(e.target).hasClass('group')) {
-                    this.parts.push(this.clone(this.current_tool));
+                if(!this.dropping) {
+                    this.updg();
                 } else {
-                    console.log('this.current_group', this.current_group);
-                    if(this.current_group) {
-                        if(!this.current_group.hasOwnProperty('children')) {
-                            this.current_group.children = [];
-                        }
-                        var obj = this.clone(this.current_tool);
-                        obj.id = Math.random();
-                        this.current_group.children.push(obj);
-                    }
-
-                    this.current_group = false;
+                    this.dropping = false;
                 }
-                this.dropped_in_droppable = true;
             },
-            changeGroup(e) {
-                console.log('cabc e', e);
-                this.current_group = e;
+            upd(e) {
+                console.log('this.current_group update', e);
+                if(e.type != 'dragover') {
+                    this.current_group = e;
+                }
+            },
+            updg() {
+                this.dropping = true;
+                if(this.current_tool) {
+                    var obj = this.clone(this.current_tool);
+                    obj.id = Math.random();
+
+                    console.log('obj', obj);
+
+                    if(!this.current_group) {
+                        this.parts.push(obj);
+                    } else {
+//                        if(!this.current_group.hasOwnProperty('children')) {
+//                            this.current_group.children = [];
+//                        }
+//                        console.log('this.current_group in dropped', this.current_group);
+//                        this.current_group.children.push(obj);
+                    }
+                }
+                this.current_group = false;
             },
             clone(obj){
                 var self = this;

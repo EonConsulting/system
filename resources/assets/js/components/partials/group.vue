@@ -9,14 +9,19 @@
                      @dragenter.prevent="enterGroup(group)"
                      @dragleave.prevent="leaveGroup(group)"
                      @dragend.prevent="leaveGroup(group)"
-                     @drop="droppedInGroup(group)"
+                     @drop.prevent="droppedInGroup(group)"
                      :class="{ 'dragndrop--dragged': isDraggedOverGroup }"
                      data-type="group"
                      :data-groupid="group.id">
 
                     <draggable :list="group.children" :options="{group:{ name:'groups'}}">
-                        <div v-for="part, index in group.children" class="bottom_20">
-                            <group :group="part" @groupUpdated="changeGroup"></group>
+                        <div v-for="p, index in group.children" class="bottom_20"
+                             @dragover.prevent="enterGroup(p)"
+                             @dragenter.prevent="enterGroup(p)"
+                             @dragleave.prevent="leaveGroup(p)"
+                             @dragend.prevent="leaveGroup(p)"
+                             @drop.prevent="droppedInGroup(p)">
+                            <group :group="p" @groupUpdated="updateGroup"></group>
                         </div>
                     </draggable>
                 </div>
@@ -67,34 +72,43 @@
             }
         },
         methods: {
-            enter() {
-                this.isDraggedOverGroup = true
+            enter(e) {
+                this.isDraggedOverGroup = true;
+                this.current_group = e;
+                console.log('e enter', e);
             },
-            leave() {
-                this.isDraggedOverGroup = false
+            leave(e) {
+                this.isDraggedOverGroup = false;
+                this.current_group = e;
+                console.log('e leave', e);
             },
             drop(e) {
                 this.leave();
-                console.log('e', e);
+                console.log('e drop', e);
+                this.current_group = e;
+                this.$emit('groupUpdated', this.current_group);
             },
             enterGroup(e) {
                 this.isDraggedOverGroup = true;
-                this.$emit('groupUpdated', e);
+                this.current_group = e;
+//                this.$emit('groupUpdated', e);
             },
             leaveGroup() {
                 this.isDraggedOverGroup = false;
-                this.$emit('groupUpdated', false);
+//                this.$emit('groupUpdated', false);
+                this.current_group = false;
             },
             droppedInGroup(e) {
                 this.leaveGroup();
-                this.$emit('groupUpdated', e);
+                console.log('e abc', this.current_group);
+                this.$emit('groupUpdated', this.current_group);
 //                if(!this.group.hasOwnProperty('children')) {
 //                    this.group.children = [];
 //                }
 //
 //                this.group.children.push(gr);
             },
-            changeGroup(e) {
+            updateGroup(e) {
                 this.current_group = e;
                 this.$emit('groupUpdated', e);
             }

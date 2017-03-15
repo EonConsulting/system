@@ -73,25 +73,26 @@
                 this.current_tool = false;
             },
             dropped(e) {
+                console.log('DROPPED');
                 console.log('groups e', e);
                 console.log('groups this.current_group', this.current_group);
                 console.log('groups this.current_tool', this.current_tool);
 
-                var tool = this.current_tool;
-
-                if(this.current_group) {
-                    if(!this.current_group.hasOwnProperty('children')) {
-                        this.current_group.children = [];
-                    }
-                    this.current_group.children.push(this.clone(this.current_tool));
-                }
-//                if(this.parts.length == 0) {
-//                    this.parts.push(this.current_tool);
+//                if(this.current_group) {
+//                    if(!this.current_group.hasOwnProperty('children')) {
+//                        this.current_group.children = [];
+//                    }
+//                    var obj = this.clone(this.current_tool);
+//                    obj.id = Math.random();
+//                    this.current_group.children.push(obj);
 //                }
-//                this.dropped_in_droppable = true;
+//
+//                this.current_group = false;
             },
             changeGroup(e) {
+                console.log('cg e', e);
                 this.current_group = e;
+                this.$emit('updated', e);
             },
             clone(obj){
                 var self = this;
