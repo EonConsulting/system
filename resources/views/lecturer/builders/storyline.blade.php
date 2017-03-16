@@ -29,5 +29,5 @@
 @endsection
 
 @section('custom-scripts')
-
+    <script src="/vendor/filemanager/lib/ckfinder/ckfinder.js"></script>
 @endsection

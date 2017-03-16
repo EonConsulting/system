@@ -23,7 +23,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-10" @drop="dropped">
+        <div class="col-md-10"
+             @drop="dropped"
+             @dragover.prevent="enter"
+             @dragenter.prevent="enter"
+             @dragleave.prevent="leave"
+             @dragend.prevent="leave"
+             :class="{ 'dragndrop--dragged': draggingOver }">
             <groups :parts="parts" :current_tool="current_tool" :cg="current_group" @update="upd" @updateGroups="updg"></groups>
         </div>
         <div class="clearfix"></div>
@@ -37,6 +43,12 @@
         height: 100%;
         min-height: var(--dragndrop-min-height);
         position: relative;
+    }
+    .dragndrop--dragged {
+        border-color: #404040 !important;
+    }
+    .bottom_20 {
+        margin-bottom: 20px;
     }
 </style>
 
@@ -57,36 +69,38 @@
             return {
                 parts:[],
                 toolbox: [
-                    {name: "Group", id: 1, icon: 'fa fa-object-group', type: 'group'},
-                    {name: "Content", id: 2, icon: 'fa fa-file-o', type: 'content'}
+                    {name: "Content", id: 2, icon: 'fa fa-file-o', type: 'content'},
+                    {name: "Group", id: 1, icon: 'fa fa-object-group', type: 'group'}
                 ],
                 current_tool: false,
                 current_group: false,
-                dropping: false
+                dropping: false,
+                draggingOver: false
             }
         },
         methods: {
+            enter() {
+                this.draggingOver = true;
+            },
+            leave() {
+                this.draggingOver = false;
+            },
             current_item(tool) {
-                console.log('current tool', tool);
                 this.current_tool = tool;
             },
-            remove_tool(tool) {
-                console.log('remove tool', tool);
+            remove_tool() {
                 this.current_tool = false;
             },
             dropped(e) {
-                console.log('e', e);
-                console.log('this.current_tool', this.current_tool);
-                console.log('this.current_group', this.current_group);
-
                 if(!this.dropping) {
                     this.updg();
                 } else {
                     this.dropping = false;
                 }
+
+                this.leave();
             },
             upd(e) {
-                console.log('this.current_group update', e);
                 if(e.type != 'dragover') {
                     this.current_group = e;
                 }
@@ -97,16 +111,8 @@
                     var obj = this.clone(this.current_tool);
                     obj.id = Math.random();
 
-                    console.log('obj', obj);
-
                     if(!this.current_group) {
                         this.parts.push(obj);
-                    } else {
-//                        if(!this.current_group.hasOwnProperty('children')) {
-//                            this.current_group.children = [];
-//                        }
-//                        console.log('this.current_group in dropped', this.current_group);
-//                        this.current_group.children.push(obj);
                     }
                 }
                 this.current_group = false;

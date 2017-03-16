@@ -19,6 +19,7 @@ Vue.component('storyline-builder', require('./components/builders/storyline/stor
 
 Vue.component('groups', require('./components/builders/storyline/partials/groups.vue'));
 Vue.component('group', require('./components/builders/storyline/partials/group.vue'));
+Vue.component('ckfinder', require('./components/builders/storyline/partials/ckfinder.vue'));
 
 const app = new Vue({
     el: '#app'

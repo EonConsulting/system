@@ -10,8 +10,8 @@
         data-type="groups">
 
         <draggable :list="parts" :options="{group:{ name:'groups'}}">
-            <div v-for="part, index in parts" class="in-group">
-                <group :group="part" :ct="current_tool" :cg="current_group" @changeGroup="changeGroup" @updateGroups="updateGroups"></group>
+            <div v-for="part, index in parts" class="in-group" :class="{'bottom_20' : parts.length > 1 && index != parts.length-1}">
+                <group :group="parts[index]" :ct="current_tool" :cg="current_group" @changeGroup="changeGroup" @updateGroups="updateGroups" @updateDrag="updateDrag"></group>
             </div>
         </draggable>
 
@@ -27,13 +27,13 @@
         background: #f9f9f9;
     }
 
-    .group {
-        border: 2px dashed #ccc;
-        min-height: 50px;
-        background: #efefef;
-        padding: 20px;
-        width: 100%;
-    }
+    /*.group {*/
+        /*border: 2px dashed #ccc;*/
+        /*min-height: 50px;*/
+        /*background: #efefef;*/
+        /*padding: 20px;*/
+        /*width: 100%;*/
+    /*}*/
 
     .bottom_20 {
         margin-bottom: 20px;
@@ -73,11 +73,7 @@
                 this.isDraggedOver = false;
             },
             dropped(e) {
-                var group = this.current_group;
                 this.leave();
-//                console.log('group', group);
-//                console.log('group', typeof group);
-//                console.log('update');
             },
             changeGroup(e) {
                 this.current_group = e;
@@ -85,6 +81,9 @@
             },
             updateGroups() {
                 this.$emit('updateGroups');
+            },
+            updateDrag() {
+                this.leave();
             }
         }
     }
