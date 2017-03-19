@@ -27,10 +27,16 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+
     @yield('custom-styles')
 </head>
 <body class="hold-transition sidebar-mini skin-black @yield('body-class')">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
     <header class="main-header">
 
@@ -366,7 +372,7 @@
                     </a>
                 </li>
 
-                <li class="treeview {{ (Route::currentRouteName() == 'courses') ? 'active' : '' }}">
+                <li class="treeview {{ (Route::currentRouteName() == 'courses' || Route::currentRouteName() == 'courses.create') ? 'active' : '' }}">
                     <a href="#">
                         <i class="fa fa-edit"></i> <span>Courses</span>
                         <span class="pull-right-container">
@@ -425,9 +431,9 @@
             </span>
                     </a>
                 </li>
-                <li>
-                    <a href="pages/widgets.html">
-                        <i class="fa fa-th"></i> <span>Widgets</span>
+                <li class="{{ (Route::currentRouteName() == 'eon.laravellti.appstore') ? 'active' : '' }}">
+                    <a href="{{ route('eon.laravellti.appstore') }}">
+                        <i class="fa fa-th"></i> <span>App Store</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>
@@ -684,6 +690,7 @@
 
 <!-- jQuery 2.2.3 -->
 <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+@yield('app-js')
 <!-- Bootstrap 3.3.6 -->
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <!-- FastClick -->

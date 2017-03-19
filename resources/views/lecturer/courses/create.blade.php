@@ -1,7 +1,7 @@
 @extends('layouts.lecturer')
 
 @section('site-title')
-    Storyline Builder
+    Create a Course
 @endsection
 
 @section('custom-styles')
@@ -21,11 +21,11 @@
 @endsection
 
 @section('page-title')
-    Storyline Builder
+    Create a Course
 @endsection
 
 @section('content')
-    <storyline-builder></storyline-builder>
+    <create-course></create-course>
 @endsection
 
 @section('app-js')
@@ -33,5 +33,5 @@
 @endsection
 
 @section('custom-scripts')
-    <script src="/vendor/filemanager/lib/ckfinder/ckfinder.js"></script>
+    <script src="/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
 @endsection

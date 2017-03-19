@@ -21,6 +21,13 @@ Vue.component('groups', require('./components/builders/storyline/partials/groups
 Vue.component('group', require('./components/builders/storyline/partials/group.vue'));
 Vue.component('ckfinder', require('./components/builders/storyline/partials/ckfinder.vue'));
 
+Vue.component('create-course', require('./components/lecturer/courses/CreateCourse.vue'));
+Vue.component('courses', require('./components/lecturer/courses/Courses.vue'));
+
+// Vue.component('upload-form', require('./components/partials/uploads/UploadForm.vue'));
+// Vue.component('uploads', require('./components/partials/uploads/Uploads.vue'));
+// Vue.component('file', require('./components/partials/uploads/File.vue'));
+
 const app = new Vue({
     el: '#app'
 });

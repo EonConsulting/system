@@ -179,7 +179,7 @@ return [
         \EONConsulting\AppStore\AppStoreServiceProvider::class,
         \EONConsulting\FileManager\FileManagerServiceProvider::class,
         \EONConsulting\Storyline\Core\StorylineCoreServiceProvider::class,
-        \EONConsulting\PHPSaasWrapper\src\PHPSaasWrapperServiceProvider::class,
+//        \EONConsulting\PHPSaasWrapper\src\PHPSaasWrapperServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -251,7 +251,7 @@ return [
         'AppStore' => \EONConsulting\AppStore\Facades\AppStore::class,
         'FileManager' => \EONConsulting\FileManager\Facades\FileManager::class,
         'StorylineCore' => \EONConsulting\Storyline\Core\Facades\StorylineCore::class,
-        'PHPSaasWrapper' => \EONConsulting\PHPSaasWrapper\src\Facades\PHPSaasWrapper::class,
+//        'PHPSaasWrapper' => \EONConsulting\PHPSaasWrapper\src\Facades\PHPSaasWrapper::class,
     ],
 
 ];

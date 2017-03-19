@@ -24,7 +24,15 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/builders/storyline', ['as' => 'builders.storyline', 'uses' => 'Builders\\StorylineBuilderController@index']);
 });
 
-Route::match(['get', 'post'], '/eon/lti/test', 'TestLTIController@index');
+Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {
+    Route::group(['prefix' => '/courses', 'namespace' => 'Courses'], function() {
+        Route::get('/', ['as' => 'courses', 'uses' => 'CoursesController@index']);
+        Route::get('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@index']);
+        Route::post('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@store']);
+        Route::get('/{course}', ['as' => 'courses.single', 'uses' => 'CourseController@show']);
+        Route::get('/{course}/storyline/create', ['as' => 'courses.single.storyline.create', 'uses' => 'CourseStorylineController@index']);
+    });
+});
 
 Route::group(['prefix' => '/lti', 'middleware' => ['auth'], 'namespace' => 'LTI'], function() {
     Route::group(['namespace' => 'Dashboards'], function() {
