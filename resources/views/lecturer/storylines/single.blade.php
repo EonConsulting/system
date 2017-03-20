@@ -25,7 +25,7 @@
 @endsection
 
 @section('content')
-    <storyline-builder></storyline-builder>
+    <storyline-builder :courseid="{{ $course->id }}"></storyline-builder>
 @endsection
 
 @section('app-js')

@@ -27,6 +27,8 @@ class CourseStorylineController extends Controller {
             $this->save_storyline($storyline, $data[$i]);
         }
 
+        return redirect()->route('courses.single.storyline', $course->id);
+
     }
 
     private function save_storyline($storyline, $data, $parent = false) {
@@ -52,6 +54,37 @@ class CourseStorylineController extends Controller {
         }
 
         $item->save();
+    }
+
+    public function get(Course $course) {
+        $storyline = $course->latest_storyline();
+        $items = $storyline->items;
+
+        $tree = $this->get_storyline($items->toArray());
+
+        return ['course' => $course, 'storyline' => $storyline, 'items' => $items, 'parts' => $tree];
+    }
+
+    private function get_storyline(array $elements, $parentId = false) {
+        $branch = array();
+
+        foreach ($elements as $element) {
+            if ($element['parent_id'] == $parentId) {
+                $children = $this->get_storyline($elements, $element['id']);
+                if ($children) {
+                    $element['children'] = $children;
+                }
+
+                if(array_key_exists('file_name', $element) && !is_null($element['file_name']) && array_key_exists('file_url', $element) && !is_null($element['file_url'])) {
+                    $element['files'] = [
+                        ['name' => $element['file_name'], 'url' => $element['file_url']]
+                    ];
+                }
+                $branch[] = $element;
+            }
+        }
+
+        return $branch;
     }
 
 }

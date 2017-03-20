@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {
         Route::post('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@store']);
         Route::get('/{course}', ['as' => 'courses.single', 'uses' => 'CourseController@show']);
         Route::get('/{course}/storyline', ['as' => 'courses.single.storyline', 'uses' => 'CourseStorylineController@index']);
+        Route::get('/{course}/storyline/feed', ['as' => 'courses.single.storyline.feed', 'uses' => 'CourseStorylineController@get']);
         Route::post('/{course}/storyline', ['as' => 'courses.single.storyline', 'uses' => 'CourseStorylineController@store']);
     });
     Route::group(['prefix' => '/content', 'namespace' => 'Content'], function() {

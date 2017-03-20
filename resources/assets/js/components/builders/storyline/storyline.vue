@@ -68,10 +68,20 @@
             draggable,
             groups
         },
-        props: ['group'],
+        props: ['group', 'courseid'],
         mounted() {
             console.log('Component ready.');
             $('#tok').val(window.Laravel.csrfToken);
+
+            var url = '/lecturer/courses/{course}/storyline/feed';
+            url = url.replace('{course}', this.courseid);
+            var self = this;
+
+            this.$http.get(url).then(response => {
+                console.log(response.body);
+                self.parts = response.body.parts;
+            });
+
         },
         data() {
             return {

@@ -14,4 +14,12 @@ class Course extends Model {
         return $this->belongsTo(User::class, 'creator_id', 'id');
     }
 
+    public function storylines() {
+        return $this->hasMany(Storyline::class, 'course_id', 'id');
+    }
+
+    public function latest_storyline() {
+        return $this->hasOne(Storyline::class, 'course_id', 'id')->orderBy('created_at', 'DESC')->first();
+    }
+
 }
