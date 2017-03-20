@@ -13755,13 +13755,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuedraggable__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuedraggable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vuedraggable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_groups__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__partials_groups___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__partials_groups__);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13826,8 +13833,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         groups: __WEBPACK_IMPORTED_MODULE_1__partials_groups___default.a
     },
     props: ['group'],
-    ready: function ready() {
+    mounted: function mounted() {
         console.log('Component ready.');
+        $('#tok').val(window.Laravel.csrfToken);
     },
     data: function data() {
         return {
@@ -13887,9 +13895,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             for (var key in obj) {
                 temp[key] = self.clone(obj[key]);
             }return temp;
+        },
+        save: function save() {
+            console.log('parts', this.parts);
+
+            $('#parts').val(JSON.stringify(this.parts));
+            $('#page-form').submit();
         }
     }
 };
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
 /* 42 */
@@ -35875,7 +35890,24 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "main"
-  }, [_c('div', {
+  }, [_c('form', {
+    attrs: {
+      "method": "POST",
+      "id": "page-form"
+    }
+  }, [_c('input', {
+    attrs: {
+      "type": "hidden",
+      "name": "_token",
+      "id": "tok"
+    }
+  }), _vm._v(" "), _c('input', {
+    attrs: {
+      "type": "hidden",
+      "name": "parts",
+      "id": "parts"
+    }
+  }), _vm._v(" "), _c('div', {
     staticClass: "col-md-2"
   }, [_c('div', {
     staticClass: "panel panel-default"
@@ -35919,7 +35951,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(tool.name) + " "), _c('i', {
       staticClass: "fa fa-arrows-alt pull-right handle"
     })])])])
-  }))], 1)])])]), _vm._v(" "), _c('div', {
+  }))], 1)]), _vm._v(" "), _c('div', {
+    staticClass: "panel-footer"
+  }, [_c('button', {
+    staticClass: "btn btn-primary btn-block",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": _vm.save
+    }
+  }, [_vm._v("Save")])])])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-10",
     class: {
       'dragndrop--dragged': _vm.draggingOver
@@ -35955,7 +35997,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1), _vm._v(" "), _c('div', {
     staticClass: "clearfix"
-  })])
+  })])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "panel-heading"

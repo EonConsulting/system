@@ -1,38 +1,45 @@
 <template>
     <div class="main">
-        <div class="col-md-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Toolbox</h3>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <draggable :list="toolbox" :options="{group:{ name:'tools',  pull:'clone', put:false}, handle: '.handle' }">
-                            <div class="media" v-for="tool in toolbox" @dragstart="current_item(tool)" @dragend="remove_tool(tool)">
-                                <div class="media-left">
-                                    <span class="media-object">
-                                        <span :class="tool.icon"></span>
-                                    </span>
+        <form method="POST" id="page-form">
+            <input type="hidden" name="_token" id="tok"/>
+            <input type="hidden" name="parts" id="parts"/>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Toolbox</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <draggable :list="toolbox" :options="{group:{ name:'tools',  pull:'clone', put:false}, handle: '.handle' }">
+                                <div class="media" v-for="tool in toolbox" @dragstart="current_item(tool)" @dragend="remove_tool(tool)">
+                                    <div class="media-left">
+                                        <span class="media-object">
+                                            <span :class="tool.icon"></span>
+                                        </span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">{{ tool.name }} <i class="fa fa-arrows-alt pull-right handle"></i></h4>
+                                    </div>
                                 </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">{{ tool.name }} <i class="fa fa-arrows-alt pull-right handle"></i></h4>
-                                </div>
-                            </div>
-                        </draggable>
-                    </ul>
+                            </draggable>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="button" class="btn btn-primary btn-block" @click="save">Save</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-10"
-             @drop="dropped"
-             @dragover.prevent="enter"
-             @dragenter.prevent="enter"
-             @dragleave.prevent="leave"
-             @dragend.prevent="leave"
-             :class="{ 'dragndrop--dragged': draggingOver }">
-            <groups :parts="parts" :current_tool="current_tool" :cg="current_group" @update="upd" @updateGroups="updg"></groups>
-        </div>
-        <div class="clearfix"></div>
+            <div class="col-md-10"
+                 @drop="dropped"
+                 @dragover.prevent="enter"
+                 @dragenter.prevent="enter"
+                 @dragleave.prevent="leave"
+                 @dragend.prevent="leave"
+                 :class="{ 'dragndrop--dragged': draggingOver }">
+                <groups :parts="parts" :current_tool="current_tool" :cg="current_group" @update="upd" @updateGroups="updg"></groups>
+            </div>
+            <div class="clearfix"></div>
+        </form>
     </div>
 </template>
 
@@ -62,8 +69,9 @@
             groups
         },
         props: ['group'],
-        ready() {
-            console.log('Component ready.')
+        mounted() {
+            console.log('Component ready.');
+            $('#tok').val(window.Laravel.csrfToken);
         },
         data() {
             return {
@@ -127,6 +135,13 @@
                     temp[key] = self.clone(obj[key]);
 
                 return temp;
+            },
+            save() {
+                console.log('parts', this.parts);
+
+                $('#parts').val(JSON.stringify(this.parts));
+                $('#page-form').submit();
+
             }
         }
     }

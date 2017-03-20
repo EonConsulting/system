@@ -40,7 +40,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Menu</div>
                     <div class="list-group">
-                        <a href="{{ route('courses.single.storyline.create', $course->id) }}" class="list-group-item">Storyline</a>
+                        <a href="{{ route('courses.single.storyline', $course->id) }}" class="list-group-item">Storyline</a>
                     </div>
                 </div>
             </div>

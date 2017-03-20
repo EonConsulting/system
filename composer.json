@@ -33,7 +33,8 @@
             "EONConsulting\\AppStore\\": "packages/app-store/src/",
             "EONConsulting\\FileManager\\": "packages/file-manager/src/",
             "EONConsulting\\Storyline\\Core\\": "packages/storyline-core/src/",
-            "EONConsulting\\PHPSaasWrapper\\": "packages/PHPSaasWrapper/src/"
+            "EONConsulting\\PHPSaasWrapper\\": "packages/PHPSaasWrapper/src/",
+            "EONConsulting\\CKEditorPlugin\\": "packages/ck-editor-plugin/src/"
         },
         "files": [
             "packages/laravel-lti/src/functions.php",
@@ -41,7 +42,8 @@
             "packages/app-store/src/functions.php",
             "packages/file-manager/src/functions.php",
             "packages/storyline-core/src/functions.php",
-            "packages/PHPSaasWrapper/src/Http/helpers.php"
+            "packages/PHPSaasWrapper/src/Http/helpers.php",
+            "packages/ck-editor-plugin/src/functions.php"
         ]
     },
     "autoload-dev": {

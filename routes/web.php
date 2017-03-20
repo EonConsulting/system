@@ -30,7 +30,12 @@ Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {
         Route::get('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@index']);
         Route::post('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@store']);
         Route::get('/{course}', ['as' => 'courses.single', 'uses' => 'CourseController@show']);
-        Route::get('/{course}/storyline/create', ['as' => 'courses.single.storyline.create', 'uses' => 'CourseStorylineController@index']);
+        Route::get('/{course}/storyline', ['as' => 'courses.single.storyline', 'uses' => 'CourseStorylineController@index']);
+        Route::post('/{course}/storyline', ['as' => 'courses.single.storyline', 'uses' => 'CourseStorylineController@store']);
+    });
+    Route::group(['prefix' => '/content', 'namespace' => 'Content'], function() {
+        Route::get('/builder', ['as' => 'content.builder', 'uses' => 'ContentBuilderController@index']);
+        Route::post('/builder', ['as' => 'content.builder', 'uses' => 'ContentBuilderController@store']);
     });
 });
 

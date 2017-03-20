@@ -363,9 +363,9 @@
                         <li class="{{ (Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}"><a href="{{ route('eon.admin.roles.users') }}"><i class="fa fa-circle-o"></i> Users</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="pages/examples/default-page.html">
-                        <i class="fa fa-book"></i> <span>Default Page </span>
+                <li class="{{ (Route::currentRouteName() == 'content.builder') ? 'active' : '' }}">
+                    <a href="{{ route('content.builder') }}">
+                        <i class="fa fa-book"></i> <span>Content Builder</span>
                         <span class="pull-right-container">
 
             </span>
