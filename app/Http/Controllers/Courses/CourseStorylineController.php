@@ -27,6 +27,7 @@ class CourseStorylineController extends Controller {
             $this->save_storyline($storyline, $data[$i]);
         }
 
+        session()->flash('success_message', 'Storyline saved.');
         return redirect()->route('courses.single.storyline', $course->id);
 
     }

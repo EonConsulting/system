@@ -151,9 +151,9 @@
                     </a>
                 </li>
 
-                <li class="{{ (Route::currentRouteName() == 'lti.users.profile') ? 'active' : '' }}">
-                    <a href="{{ route('lti.users.profile') }}">
-                        <i class="fa fa-dashboard"></i> <span>Profile</span>
+                <li class="{{ (Route::currentRouteName() == 'lti.courses') ? 'active' : '' }}">
+                    <a href="{{ route('lti.courses') }}">
+                        <i class="fa fa-dashboard"></i> <span>Courses</span>
                         <span class="pull-right-container"></span>
                     </a>
                 </li>

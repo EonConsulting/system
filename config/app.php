@@ -179,7 +179,8 @@ return [
         \EONConsulting\AppStore\AppStoreServiceProvider::class,
         \EONConsulting\FileManager\FileManagerServiceProvider::class,
         \EONConsulting\Storyline\Core\StorylineCoreServiceProvider::class,
-        \EONConsulting\CKEditorPlugin\CKEditorPluginServiceProvider::class,
+        \EONConsulting\Storyline\Nav\StorylineNavServiceProvider::class,
+        \EONConsulting\CKEditorPluginV2\CKEditorPluginV2ServiceProvider::class,
 //        \EONConsulting\PHPSaasWrapper\src\PHPSaasWrapperServiceProvider::class,
 
         /*
@@ -252,7 +253,8 @@ return [
         'AppStore' => \EONConsulting\AppStore\Facades\AppStore::class,
         'FileManager' => \EONConsulting\FileManager\Facades\FileManager::class,
         'StorylineCore' => \EONConsulting\Storyline\Core\Facades\StorylineCore::class,
-        'CKEditor' => \Packages\CKEditorPlugin\src\Facades\CKEditorPlugin::class,
+        'StorylineNav' => \EONConsulting\Storyline\Nav\Facades\StorylineNav::class,
+        'CKEditor' => \EONConsulting\CKEditorPluginV2\Facades\CKEditorPluginV2::class,
 //        'PHPSaasWrapper' => \EONConsulting\PHPSaasWrapper\src\Facades\PHPSaasWrapper::class,
     ],
 

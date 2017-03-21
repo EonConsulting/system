@@ -12,7 +12,14 @@ class ContentBuilderController extends Controller {
     }
 
     public function store(Request $request) {
-        dd($request->all());
+        $page = public_path().'/EON/system/public/vendor/storyline/core/files/content/' . $request->get('file_name') . '.html';
+
+        $file = fopen($page, "w");
+        fwrite($file, $request->get('data'));
+        fclose($file);
+
+        session()->flash('success_message', 'File saved under ' . $request->get('file_name') . '.html');
+        return redirect()->route('content.builder');
     }
 
 }
