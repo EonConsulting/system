@@ -22,4 +22,8 @@ class Course extends Model {
         return $this->hasOne(Storyline::class, 'course_id', 'id')->orderBy('created_at', 'DESC')->first();
     }
 
+    public function users() {
+        return $this->hasMany(CourseUser::class, 'course_id', 'id');
+    }
+
 }

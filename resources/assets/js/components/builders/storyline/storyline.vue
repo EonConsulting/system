@@ -1,10 +1,10 @@
 <template>
-    <div class="main">
+    <div class="main container-fluid">
         <form method="POST" id="page-form">
             <input type="hidden" name="_token" id="tok"/>
             <input type="hidden" name="parts" id="parts"/>
-            <div class="col-md-2">
-                <div class="panel panel-default">
+            <div class="col-md-2" style="position: relative;">
+                <div class="panel panel-default" style="position: absolute; left: 0; right: 0;">
                     <div class="panel-heading">
                         <h3 class="panel-title">Toolbox</h3>
                     </div>
@@ -56,6 +56,9 @@
     }
     .bottom_20 {
         margin-bottom: 20px;
+    }
+    .affix {
+        top: 20px;
     }
 </style>
 

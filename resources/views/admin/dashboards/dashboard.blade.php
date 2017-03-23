@@ -1,7 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.lecturer')
 
 @section('site-title')
-    Admin | Dashboard
+    Dashboard
 @endsection
 
 @section('custom-styles')
@@ -13,15 +13,15 @@
 @endsection
 
 @section('mini-logo-title')
-    Admin
+    Unisa
 @endsection
 
 @section('logo-title')
-    Admin
+    Unisa
 @endsection
 
 @section('page-title')
-    Dashboard | Admin
+    Dashboard
 @endsection
 
 @section('content')

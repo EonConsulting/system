@@ -24,6 +24,7 @@ Vue.component('ckfinder', require('./components/builders/storyline/partials/ckfi
 
 Vue.component('create-course', require('./components/lecturer/courses/CreateCourse.vue'));
 Vue.component('courses', require('./components/lecturer/courses/Courses.vue'));
+Vue.component('course-notify-users', require('./components/lecturer/courses/Notify.vue'));
 
 // Vue.component('upload-form', require('./components/partials/uploads/UploadForm.vue'));
 // Vue.component('uploads', require('./components/partials/uploads/Uploads.vue'));

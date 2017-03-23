@@ -15,7 +15,7 @@
     <!-- jvectormap -->
     <link rel="stylesheet" href="/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/dist/css/AdminLTE.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
@@ -51,7 +51,7 @@
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">   <i class="fa fa-arrow-left"></i>
                 <span class="sr-only">Toggle navigation</span>
             </a>
             <!-- Navbar Right Menu -->
@@ -384,53 +384,6 @@
                         <li class="{{ (Route::currentRouteName() == 'courses.create') ? 'active' : '' }}"><a href="{{ route('courses.create') }}"><i class="fa fa-circle-o"></i> Create</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-book"></i> <span>Assignments</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="../index.html"><i class="fa fa-circle-o"></i> Assignment 1</a></li>
-                        <li><a href="../index2.html"><i class="fa fa-circle-o"></i> Assignment 2</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="pages/calendar.html">
-                        <i class="fa fa-calendar"></i> <span>Calendar</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/examples/goals.html">
-                        <i class="fa fa-book"></i> <span>Goals </span>
-                        <span class="pull-right-container">
-
-            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/chat.html">
-                        <i class="fa fa-th"></i> <span>Chat</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/mailbox/mailbox.html">
-                        <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span>
-                    </a>
-                </li>
                 <li class="{{ (Route::currentRouteName() == 'eon.laravellti.appstore') ? 'active' : '' }}">
                     <a href="{{ route('eon.laravellti.appstore') }}">
                         <i class="fa fa-th"></i> <span>App Store</span>
@@ -438,23 +391,6 @@
               <small class="label pull-right bg-green">new</small>
             </span>
                     </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-pie-chart"></i>
-                        <span>Charts</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-
-
-
-                        </li>
-
-                    </ul>
                 </li>
             </ul>
         </section>
@@ -696,7 +632,7 @@
 <!-- FastClick -->
 <script src="/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="/dist/js/app.min.js"></script>
+<script src="/dist/js/app.js"></script>
 <!-- Sparkline -->
 <script src="/plugins/sparkline/jquery.sparkline.min.js"></script>
 <!-- SlimScroll 1.3.0 -->

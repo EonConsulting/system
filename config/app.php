@@ -180,7 +180,10 @@ return [
         \EONConsulting\FileManager\FileManagerServiceProvider::class,
         \EONConsulting\Storyline\Core\StorylineCoreServiceProvider::class,
         \EONConsulting\Storyline\Nav\StorylineNavServiceProvider::class,
+        \EONConsulting\Storyline\Menu\StorylineMenuServiceProvider::class,
         \EONConsulting\CKEditorPluginV2\CKEditorPluginV2ServiceProvider::class,
+        \EONConsulting\CKEditorPlugin\CKEditorPluginServiceProvider::class,
+//        \EONConsulting\Graphs\GraphsServiceProvider::class,
 //        \EONConsulting\PHPSaasWrapper\src\PHPSaasWrapperServiceProvider::class,
 
         /*
@@ -254,7 +257,10 @@ return [
         'FileManager' => \EONConsulting\FileManager\Facades\FileManager::class,
         'StorylineCore' => \EONConsulting\Storyline\Core\Facades\StorylineCore::class,
         'StorylineNav' => \EONConsulting\Storyline\Nav\Facades\StorylineNav::class,
-        'CKEditor' => \EONConsulting\CKEditorPluginV2\Facades\CKEditorPluginV2::class,
+        'StorylineMenu' => \EONConsulting\Storyline\Menu\Facades\StorylineMenu::class,
+        'CKEditorV2' => \EONConsulting\CKEditorPluginV2\Facades\CKEditorPluginV2::class,
+        'CKEditor' => \Packages\CKEditorPlugin\src\Facades\CKEditorPlugin::class,
+//        'Graphs' => \Packages\Graphs\src\Facades\Graphs::class,
 //        'PHPSaasWrapper' => \EONConsulting\PHPSaasWrapper\src\Facades\PHPSaasWrapper::class,
     ],
 

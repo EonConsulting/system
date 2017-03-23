@@ -11942,6 +11942,7 @@ Vue.component('ckfinder', __webpack_require__(60));
 
 Vue.component('create-course', __webpack_require__(64));
 Vue.component('courses', __webpack_require__(63));
+Vue.component('course-notify-users', __webpack_require__(98));
 
 // Vue.component('upload-form', require('./components/partials/uploads/UploadForm.vue'));
 // Vue.component('uploads', require('./components/partials/uploads/Uploads.vue'));
@@ -13824,6 +13825,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 //
 //
+//
+//
+//
 
 
 
@@ -14100,12 +14104,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-//    import UploadForm from '../../partials/uploads/UploadForm'
-
 /* harmony default export */ __webpack_exports__["default"] = {
-    components: {
-        //            UploadForm
-    },
     mounted: function mounted() {
         console.log('Component ready.', window.Laravel.csrfToken);
         $('#login-token').val(window.Laravel.csrfToken);
@@ -16591,7 +16590,7 @@ exports.push([module.i, "\n.droppable {\n    padding: 20px;\n    width: 100%;\n 
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)();
-exports.push([module.i, "\n.main {\n    --dragndrop-min-height: 400px;\n    width: 100%;\n    height: 100%;\n    min-height: var(--dragndrop-min-height);\n    position: relative;\n}\n.dragndrop--dragged {\n    border-color: #404040 !important;\n}\n.bottom_20 {\n    margin-bottom: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.main {\n    --dragndrop-min-height: 400px;\n    width: 100%;\n    height: 100%;\n    min-height: var(--dragndrop-min-height);\n    position: relative;\n}\n.dragndrop--dragged {\n    border-color: #404040 !important;\n}\n.bottom_20 {\n    margin-bottom: 20px;\n}\n.affix {\n    top: 20px;\n}\n", ""]);
 
 /***/ }),
 /* 51 */
@@ -35899,7 +35898,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "main"
+    staticClass: "main container-fluid"
   }, [_c('form', {
     attrs: {
       "method": "POST",
@@ -35918,9 +35917,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "id": "parts"
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "col-md-2"
+    staticClass: "col-md-2",
+    staticStyle: {
+      "position": "relative"
+    }
   }, [_c('div', {
-    staticClass: "panel panel-default"
+    staticClass: "panel panel-default",
+    staticStyle: {
+      "position": "absolute",
+      "left": "0",
+      "right": "0"
+    }
   }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
   }, [_c('ul', {
@@ -47395,6 +47402,359 @@ module.exports = function(module) {
 __webpack_require__(16);
 module.exports = __webpack_require__(17);
 
+
+/***/ }),
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = {
+    mounted: function mounted() {
+
+        $('#tok').val(window.Laravel.csrfToken);
+        var url = '/lecturer/courses/{course}/notify/users';
+        url = url.replace('{course}', this.courseid);
+        var self = this;
+
+        this.$http.get(url).then(function (response) {
+            console.log(response.body);
+            self.emails = response.body;
+        });
+
+        $('#email-form').on('submit', function () {
+            if (this.emails.length == 0) {
+                return false;
+            }
+        });
+    },
+    data: function data() {
+        return {
+            emails: [],
+            current_email: '',
+            current_index: false,
+            in_edit: false
+        };
+    },
+
+    props: ['courseid'],
+    methods: {
+        add_email: function add_email() {
+            if (this.current_email != '') {
+                if (!this.in_edit) {
+                    this.emails.push(this.current_email);
+                } else {
+                    this.emails[this.current_index] = this.current_email;
+                }
+            }
+
+            this.stop_edit();
+        },
+        edit_email: function edit_email(index, email) {
+            this.current_index = index;
+            this.current_email = email;
+            this.in_edit = true;
+        },
+        remove_email: function remove_email(index) {
+            this.emails.splice(index, 1);
+            this.stop_edit();
+        },
+        stop_edit: function stop_edit() {
+            this.current_email = '';
+            this.current_index = false;
+            this.in_edit = false;
+        },
+        submit: function submit() {
+            $('#emails').val(JSON.stringify(this.emails));
+            $('#email-form').submit();
+        }
+    }
+};
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(4)))
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)();
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(100)
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(96),
+  /* template */
+  __webpack_require__(99),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/EON/system/resources/assets/js/components/lecturer/courses/Notify.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Notify.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6aef8148", Component.options)
+  } else {
+    hotAPI.reload("data-v-6aef8148", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("Enter email addresses to notify about this course "), _c('button', {
+    staticClass: "btn btn-primary btn-xs pull-right",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": _vm.submit
+    }
+  }, [_vm._v("Save & Notify")])]), _vm._v(" "), _c('div', {
+    staticClass: "panel-body"
+  }, [_c('div', {
+    staticClass: "input-group"
+  }, [_c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.current_email),
+      expression: "current_email"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Enter email here"
+    },
+    domProps: {
+      "value": (_vm.current_email)
+    },
+    on: {
+      "keyup": function($event) {
+        if (_vm._k($event.keyCode, "enter", 13)) { return null; }
+        $event.preventDefault();
+        _vm.add_email($event)
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.current_email = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "input-group-btn"
+  }, [_c('button', {
+    staticClass: "btn btn-success",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": _vm.add_email
+    }
+  }, [_c('span', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (!_vm.in_edit),
+      expression: "!in_edit"
+    }]
+  }, [_vm._v("Add")]), _c('span', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.in_edit),
+      expression: "in_edit"
+    }]
+  }, [_vm._v("Update")])]), _vm._v(" "), _c('button', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.in_edit),
+      expression: "in_edit"
+    }],
+    staticClass: "btn btn-danger",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": _vm.stop_edit
+    }
+  }, [_vm._v("Stop Edit")])])]), _vm._v(" "), _c('table', {
+    staticClass: "table table-hover table-striped"
+  }, [_vm._m(1), _vm._v(" "), _c('tbody', _vm._l((_vm.emails), function(email, index) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(email))]), _vm._v(" "), _c('td', [_c('button', {
+      staticClass: "btn btn-xs btn-info",
+      attrs: {
+        "type": "button"
+      },
+      on: {
+        "click": function($event) {
+          $event.preventDefault();
+          _vm.edit_email(index, email)
+        }
+      }
+    }, [_c('span', {
+      staticClass: "glyphicon glyphicon-edit"
+    })])]), _vm._v(" "), _c('td', [_c('button', {
+      staticClass: "btn btn-xs btn-danger",
+      attrs: {
+        "type": "button"
+      },
+      on: {
+        "click": function($event) {
+          $event.preventDefault();
+          _vm.remove_email(index)
+        }
+      }
+    }, [_c('span', {
+      staticClass: "glyphicon glyphicon-remove"
+    })])])])
+  }))])])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('form', {
+    staticClass: "form-horizontal",
+    attrs: {
+      "method": "POST",
+      "id": "email-form"
+    }
+  }, [_c('input', {
+    attrs: {
+      "type": "hidden",
+      "name": "_token",
+      "id": "tok"
+    }
+  }), _vm._v(" "), _c('input', {
+    attrs: {
+      "type": "hidden",
+      "name": "emails",
+      "id": "emails"
+    }
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('thead', [_c('tr', [_c('td', {
+    staticClass: "col-md-10"
+  }, [_vm._v("Email")]), _vm._v(" "), _c('td', {
+    staticClass: "col-md-1"
+  }, [_vm._v("Edit")]), _vm._v(" "), _c('td', {
+    staticClass: "col-md-1"
+  }, [_vm._v("Remove")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6aef8148", module.exports)
+  }
+}
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(97);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("b64a3a2e", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6aef8148!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Notify.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6aef8148!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Notify.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

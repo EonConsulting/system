@@ -15,7 +15,7 @@ class ContentBuilderController extends Controller {
         $page = public_path().'/EON/system/public/vendor/storyline/core/files/content/' . $request->get('file_name') . '.html';
 
         $file = fopen($page, "w");
-        fwrite($file, $request->get('data'));
+        fwrite($file, json_decode($request->get('data')));
         fclose($file);
 
         session()->flash('success_message', 'File saved under ' . $request->get('file_name') . '.html');

@@ -140,6 +140,7 @@
             );
 
             editor.config.fullPage = true;
+            config.extraPlugins = 'ltieditorv2, mathjax, Widget,  Line Utilities, Dialog, Clipboard, xml, print';
 
 //            CKEDITOR.on('instanceReady',
 //            function (evt) {

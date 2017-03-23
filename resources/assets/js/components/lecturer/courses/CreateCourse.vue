@@ -47,12 +47,7 @@
 </style>
 
 <script>
-//    import UploadForm from '../../partials/uploads/UploadForm'
-
     export default {
-        components: {
-//            UploadForm
-        },
         mounted() {
             console.log('Component ready.', window.Laravel.csrfToken);
             $('#login-token').val(window.Laravel.csrfToken);
