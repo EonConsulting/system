@@ -75,11 +75,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-            {{--<div class="col-md-3">--}}
-                {{--{!! $nav !!}--}}
-                {{--<div class="clearfix"></div>--}}
-            {{--</div>--}}
-            <div class="col-md-11">
+            <div class="col-md-3">
+                {!! $nav !!}
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-9">
                 <iframe src="{{ $storyline_item->file_url }}" class="composite-embed" id="idIframe" frameBorder="0" style="height: 100%; min-height: 750px;" onload="resizeIframe(this)"></iframe>
             </div>
         </div>
@@ -99,7 +99,8 @@
 
     <script>
         window.onload = function() {
-            {{--{!! $cs !!}--}}
+            {!! $cs !!}
+            $('a.sidebar-toggle').trigger('click');
         };
 
         $('.dropdown').hover(function(){

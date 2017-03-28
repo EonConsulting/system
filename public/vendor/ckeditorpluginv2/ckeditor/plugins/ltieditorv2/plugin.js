@@ -53,25 +53,36 @@
                                                     url: '/ajaxresponse/' + context_id,
                                                     type: 'GET',
                                                     success: function (launchvars) {
-                                                        var url        = '/ajaxresponse/' +context_id;;
+                                                        var url        = '/ajaxresponse/' +context_id;
                                                         var div        = new CKEDITOR.dom.element('div');
                                                         var appframe   = new CKEDITOR.dom.element('iframe');
+                                                        console.log('appframe', appframe);
                                                         //Set Iframe Attributes
                                                         div.setAttributes({
                                                             'class': 'appframe'
                                                         });
                                                         appframe.setAttributes({
                                                             'width' :'100%',
-                                                            'height': 500,
+                                                            'height': 750,
                                                             'type'  : 'text/html',
                                                             'src': url,
                                                             'allowtransparency': 'true',
                                                             'frameborder': 0,
-                                                            'class': 'ckeditorframev2'
-
+                                                            'class': 'ckeditorframev2',
+                                                            'scrolling': 'no'
                                                         });
-                                                        //Insert Element and Exit Dialog Window
+
+                                                        // $(appframe).on('load', function() {
+                                                        //     console.log('appframe2', appframe);
+                                                        //     $(appframe).height($(appframe).contents().find("html").height());
+                                                        //     // appframe.style.height = appframe.contentWindow.document.body.scrollHeight + 'px';
+                                                        //     // $(appframe).setAttribute('height', $(appframe).contentWindow.document.body.scrollHeight + 'px');
+                                                        // });
+                                                        // $(appframe).load();
+
                                                         editor.insertElement(div, div.append(appframe));
+
+                                                        //Insert Element and Exit Dialog Window
                                                         CKEDITOR.dialog.getCurrent().hide();
                                                     },
                                                 })

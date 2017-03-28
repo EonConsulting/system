@@ -25,7 +25,7 @@
 @endsection
 
 @section('page-title')
-   Student Dashboard | Admin
+   Student Dashboard
 @endsection
 
 @section('content')
