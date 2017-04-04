@@ -225,20 +225,11 @@ body.hold-transition .main-header .logo {
     padding-right: 15px;
 }
 /* H1 - H6 font */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-    font-family: 'Source Sans Pro', sans-serif;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'SansSerif', 'Sans-Serif', 'Helvetica', Arial !important;
+    color: #1c406d !important;
 }
+.h1, h1 {  font-size: 25px !important; font-family: Sans}
 /* General Links */
 a {
     color: #3c8dbc;
