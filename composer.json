@@ -6,7 +6,7 @@
     "type": "project",
     "repositories": [
         {
-            "type" : "vcs",
+            "type" : "git",
             "url" : "https://github.com/EonConsulting/system.git"
          }
     ],
