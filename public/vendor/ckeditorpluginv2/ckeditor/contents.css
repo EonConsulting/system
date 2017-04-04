@@ -16,6 +16,7 @@ body
 	background-color: #fff;
 
 	margin: 20px;
+	padding:10px;
 }
 
 .lti_frameResize {max-width: 450px; height: 450px !important; max-height:350px;}

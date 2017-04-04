@@ -92,17 +92,16 @@
                     </div>
                 @endif
 
-                <label>File Name:</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" name="file_name" placeholder="File name" value="{{ (old('file_name')) ? old('file_name') : time() }}"/>
+                    <input type="text" class="form-control" name="file_name" placeholder="Content Title" value=""/>
                     <span class="input-group-addon" id="basic-addon2">.html</span>
                 </div>
-                <br /><br />
-                <label>Content:</label>
+                <br />
                 <textarea id="ltieditorv2inst" class="ckeditor" name="editor">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
                 <input type="hidden" id="data" name="data" />
                 <br />
-                <button type="button" id="btnsbmit" class="btn">Save Data</button>
+                <button type="button" id="btnsbmit" class="btn btn-primary btn-sm">Save Content</button>
+                <button type="button" id="btnsbmit" class="btn btn-warning btn-sm">Move to trash</button>
                 {{ csrf_field() }}
             </form>
         </div>
@@ -110,7 +109,7 @@
 @endsection
 
 @section('custom-scripts')
-    <script src="/vendor/ckeditorpluginv2/ckeditor/ckeditor.js"></script>
+    <script src="{{url('/vendor/ckeditorpluginv2/ckeditor/ckeditor.js')}}"></script>
     <script src="https://use.fontawesome.com/5154cf88f4.js"></script>
     <script>
         //Dialogue Insertion Point -->
@@ -124,7 +123,11 @@
         $(function(){
 
             var editor = CKEDITOR.replace('ltieditorv2inst', {
-                    extraPlugins: 'ltieditorv2',
+                        extraPlugins: 'ltieditorv2,html2PDF,mathjax,mathjax2,dialog,xml,templates,widget,lineutils,widgetselection,clipboard',
+                        allowedContent: true,
+                        fullPage: true,
+                        mathJaxLib: '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG',
+                        height: 280,
                     on : {
                         // maximize the editor on startup
                         'instanceReady' : function( evt ) {
@@ -134,12 +137,9 @@
                             this.document.appendStyleSheet( '/vendor/storyline/core/components/css/economics.css' );
                             this.document.appendStyleSheet( 'https://fonts.googleapis.com/icon?family=Material+Icons' );
                         }
-                    },
-                },
-                config.allowedContent = true
+                    }
+                }
             );
-
-            editor.config.fullPage = true;
 
 
 //            CKEDITOR.on('instanceReady',

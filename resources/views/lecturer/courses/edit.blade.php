@@ -110,7 +110,7 @@
 @endsection
 
 @section('custom-scripts')
-    <script src="/vendor/ckeditorpluginv2/ckeditor/ckeditor.js"></script>
+    <script src="{{url('/vendor/ckeditorpluginv2/ckeditor/ckeditor.js')}}"></script>
     <script src="https://use.fontawesome.com/5154cf88f4.js"></script>
     <script>
         //Dialogue Insertion Point -->

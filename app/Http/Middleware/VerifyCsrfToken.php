@@ -12,6 +12,6 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        '/eon/lti/*', '/eon/*', '/lti/*', '/lti'
+        '/eon/lti/*', '/eon/*', '/lti/*', '/lti', '/html2PDF'
     ];
 }

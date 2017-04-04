@@ -54,9 +54,9 @@
 @endsection
 
 @section('app-js')
-    <script src="/js/app.js"></script>
+    <script src="{{url('/js/app.js')}}"></script>
 @endsection
 
 @section('custom-scripts')
-    <script src="/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+    <script src="{{url('/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.js')}}"></script>
 @endsection
