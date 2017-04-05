@@ -50,9 +50,9 @@
 @endsection
 
 @section('app-js')
-    <script src="{{url('/js/app.js')}}"></script>
+    <script src="/js/app.js"></script>
 @endsection
 
 @section('custom-scripts')
-    <script src="{{url('/vendor/filemanager/lib/ckfinder/ckfinder.js')}}"></script>
+    <script src="/vendor/filemanager/lib/ckfinder/ckfinder.js"></script>
 @endsection

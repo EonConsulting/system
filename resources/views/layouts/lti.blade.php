@@ -132,23 +132,14 @@
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search Content">
-                    <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>
+
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">Administrator</li>
 
                 <li class="{{ (Route::currentRouteName() == 'lti.dashboards') ? 'active' : '' }}">
-                    <a href="{{ url('/home') }}">
+                    <a href="{{ route('lti.dashboards')}}">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         <span class="pull-right-container"></span>
                     </a>
@@ -403,7 +394,7 @@
 <!-- Sparkline -->
 <script src="{{url('/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
 <!-- SlimScroll 1.3.0 -->
-<script src="{{url('/plugins/slimScroll/jquery.slimscroll.min.js)}}"></script>
+<script src="{{url('/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
 
 @yield('custom-scripts')
 

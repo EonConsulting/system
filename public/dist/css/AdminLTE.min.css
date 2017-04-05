@@ -11,60 +11,60 @@
  * -------------------------
  */
 
-/*
-|------------------------------------------------------------------------------------
-| Style Overrides by Peace Ngara - Skinning the App - Putting it on Steroids
-|------------------------------------------------------------------------------------
-*/
-.skin-black .main-header {min-height: 70px !important; box-shadow: 0 2px 4px 0 #e6e9ed !important;
-    background: #ffffff;}
-.main-header .logo {min-height: 70px !important; line-height: 70px !important; }
-.skin-black .main-header .navbar>.sidebar-toggle {min-height:70px !important}
-.main-header .navbar-custom-menu, .main-header .navbar-right {min-height: 70px !important}
-.navbar-nav>li>a {min-height:70px; padding-top:35px; }
-.main-sidebar, .left-side {padding-top:70px !important}
-.skin-black .sidebar a {border-bottom: 2px solid rgba(0,0,0,.05) !important;border-top: 1px solid #f4f4f4 !important; color: rgba(0,0,0,0.87) !important}
-.sidebar-menu > li > a {padding: 15px 5px 15px 15px !important}
-.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {background: #f1f1f1 !important;
-    border-right: 1px solid #eee}
-.skin-black .sidebar-form {width:300px !important; display: inline-block; border:1px solid #d2d6de !important;}
-.skin-black .sidebar-form input[type="text"], .skin-black .sidebar-form .btn {background-color:transparent !important;height:42px !important; padding:0 8px !important}
-.skin-black .sidebar-menu>li.header {
-    color: #333 !important;
-    background: #ccc !important;
-    height: 50px;
-    padding-top: 18px;
-    font-weight: bold;
-}
-.skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a {
-    color: #fff;
-    background: #fff !important;
-    border-left-color: #fff;
-}
-.sidebar-menu > li > a > .fa, .sidebar-menu > li > a > .glyphicon, .sidebar-menu > li > a > .ion {
-    width: 30px !important;
-    font-size: 18px !important;
-    font-weight: bold !important;
-}
-.skin-black .sidebar-menu>li>.treeview-menu {background: #fff !important}
+/*!**/
+/*|------------------------------------------------------------------------------------*/
+/*| Style Overrides by Peace Ngara - Skinning the App - Putting it on Steroids*/
+/*|------------------------------------------------------------------------------------*/
+/**!*/
+/*.skin-black .main-header {min-height: 70px !important; box-shadow: 0 2px 4px 0 #e6e9ed !important;*/
+    /*background: #ffffff;}*/
+/*.main-header .logo {min-height: 70px !important; line-height: 70px !important; }*/
+/*.skin-black .main-header .navbar>.sidebar-toggle {min-height:70px !important}*/
+/*.main-header .navbar-custom-menu, .main-header .navbar-right {min-height: 70px !important}*/
+/*.navbar-nav>li>a {min-height:70px; padding-top:35px; }*/
+/*.main-sidebar, .left-side {padding-top:70px !important}*/
+/*.skin-black .sidebar a {border-bottom: 2px solid rgba(0,0,0,.05) !important;border-top: 1px solid #f4f4f4 !important; color: rgba(0,0,0,0.87) !important}*/
+/*.sidebar-menu > li > a {padding: 15px 5px 15px 15px !important}*/
+/*.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {background: #f1f1f1 !important;*/
+    /*border-right: 1px solid #eee}*/
+/*.skin-black .sidebar-form {width:300px !important; display: inline-block; border:1px solid #d2d6de !important;}*/
+/*.skin-black .sidebar-form input[type="text"], .skin-black .sidebar-form .btn {background-color:transparent !important;height:42px !important; padding:0 8px !important}*/
+/*.skin-black .sidebar-menu>li.header {*/
+    /*color: #333 !important;*/
+    /*background: #ccc !important;*/
+    /*height: 50px;*/
+    /*padding-top: 18px;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a {*/
+    /*color: #fff;*/
+    /*background: #fff !important;*/
+    /*border-left-color: #fff;*/
+/*}*/
+/*.sidebar-menu > li > a > .fa, .sidebar-menu > li > a > .glyphicon, .sidebar-menu > li > a > .ion {*/
+    /*width: 30px !important;*/
+    /*font-size: 18px !important;*/
+    /*font-weight: bold !important;*/
+/*}*/
+/*.skin-black .sidebar-menu>li>.treeview-menu {background: #fff !important}*/
 
-.content-wrapper, .right-side {
-    background-color: #f9faf7 !important;
-}
+/*.content-wrapper, .right-side {*/
+    /*background-color: #f9faf7 !important;*/
+/*}*/
 
-.container { max-width: 100% !important;  }
-.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    height: 42px !important;
-    padding: 0 8px !important;
-}
-#cke_ltieditorv2inst {border:1px solid #eee}
+/*.container { max-width: 100% !important;  }*/
+/*.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {*/
+    /*border-top-right-radius: 0;*/
+    /*border-bottom-right-radius: 0;*/
+    /*height: 42px !important;*/
+    /*padding: 0 8px !important;*/
+/*}*/
+/*#cke_ltieditorv2inst {border:1px solid #eee}*/
 
-/*-------------------------------------------------------------------------------------
-| End Peace Styles To Revert to Default Styles Just remove Peace Overrides
-|--------------------------------------------------------------------------------------
-*/
+/*!*-------------------------------------------------------------------------------------*/
+/*| End Peace Styles To Revert to Default Styles Just remove Peace Overrides*/
+/*|--------------------------------------------------------------------------------------*/
+/**!*/
 html,
 body {
     height: 100%;

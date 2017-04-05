@@ -47,6 +47,7 @@
                     <i class="fa fa-bars"></i>
                 </a>
                 {!! $menu !!}
+                Test Menu !!!
             </li>
         </ul>
     </div>

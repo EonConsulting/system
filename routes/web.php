@@ -25,7 +25,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/builders/storyline', ['as' => 'builders.storyline', 'uses' => 'Builders\\StorylineBuilderController@index']);
 });
 
-Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {
+Route::get('/logout', function()
+{
+    Auth::logout();
+    Session::flush();
+    return Redirect::to('/home');
+});
+
+Route::group(['middleware' => ['auth', 'instructor'], 'prefix' => '/lecturer'], function() {
     Route::group(['prefix' => '/courses', 'namespace' => 'Courses'], function() {
         Route::get('/', ['as' => 'courses', 'uses' => 'CoursesController@index']);
         Route::get('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@index']);

@@ -27,6 +27,9 @@ class HomeController extends Controller
 //        return view('landing.todo');
 
         // else
+        if (laravel_lti()->is_learner(auth()->user())) {
+            return view('lti.dashboards.student');
+        }
         return view('admin.dashboards.dashboard');
     }
 }

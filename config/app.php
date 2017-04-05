@@ -196,6 +196,7 @@ return [
 //        \EONConsulting\CKEditorPlugin\CKEditorPluginServiceProvider::class,
 //        \EONConsulting\Graphs\GraphsServiceProvider::class,
 //        \EONConsulting\PHPSaasWrapper\src\PHPSaasWrapperServiceProvider::class,
+        //\EONConsulting\Storyline\Breadcrumbs\StorylineBreadcrumbServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -274,6 +275,7 @@ return [
 //        'CKEditor' => \Packages\CKEditorPlugin\src\Facades\CKEditorPlugin::class,
 //        'Graphs' => \Packages\Graphs\src\Facades\Graphs::class,
 //        'PHPSaasWrapper' => \EONConsulting\PHPSaasWrapper\src\Facades\PHPSaasWrapper::class,
+        //'StorylineBreadcrumbs' => EONConsulting\Storyline\Breadcrumbs\StorylineBreadcrumbs::class,
     ],
 
 ];
