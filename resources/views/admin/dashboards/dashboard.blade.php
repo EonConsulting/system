@@ -440,7 +440,7 @@
                     <!-- My Courses LIST -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Courses</h3>
+                            <h3 class="box-title">Modules</h3>
 
                             <div class="box-tools pull-right">
                                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -456,7 +456,7 @@
                                         <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
-                                        <a href="javascript:void(0)" class="product-title">Course 1
+                                        <a href="javascript:void(0)" class="product-title">Module  1
                                             <!-- <span class="label label-warning pull-right">$1800</span></a> -->
                                             <span class="product-description">
                           Description of the course.

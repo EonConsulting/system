@@ -123,7 +123,7 @@
         $(function(){
 
             var editor = CKEDITOR.replace('ltieditorv2inst', {
-                        extraPlugins: 'ltieditorv2,html2PDF,mathjax,mathjax2,dialog,xml,templates,widget,lineutils,widgetselection,clipboard',
+                        extraPlugins: 'ltieditorv2,html2PDF,mathjax,dialog,xml,templates,widget,lineutils,widgetselection,clipboard',
                         allowedContent: true,
                         fullPage: true,
                         mathJaxLib: '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG',
