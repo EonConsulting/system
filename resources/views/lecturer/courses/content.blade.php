@@ -60,7 +60,7 @@
 @endsection
 
 @section('app-js')
-    <script src="/js/app.js"></script>
+    <script src="{{ url('/js/app.js') }}"></script>
 @endsection
 
 @section('custom-scripts')

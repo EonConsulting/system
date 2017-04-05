@@ -67,7 +67,7 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Support Team
@@ -80,7 +80,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{ url('/dist/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 AdminLTE Design Team
@@ -92,7 +92,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{url('/dist/img/user4-128x128.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Developers
@@ -104,7 +104,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{url('/dist/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Sales Department
@@ -116,7 +116,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="{{ url('/dist/img/user4-128x128.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Reviewers
@@ -249,33 +249,20 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
                             <span class="hidden-xs">{{ auth()->user()->name }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                                 <p>
                                     {{ auth()->user()->name }}
                                 </p>
                             </li>
                             <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
+               
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
@@ -303,7 +290,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>{{ auth()->user()->name }}</p>
@@ -661,17 +648,17 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="{{ url('/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ url('/bootstrap/js/bootstrap.min.js') }}"></script>
 <!-- FastClick -->
-<script src="/plugins/fastclick/fastclick.js"></script>
+<script src="{{ url('/plugins/fastclick/fastclick.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="/dist/js/app.js"></script>
+<script src="{{ url('/dist/js/app.js') }}"></script>
 <!-- Sparkline -->
-<script src="/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="{{ url('/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
 <!-- SlimScroll 1.3.0 -->
-<script src="/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="{{ url('/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
 
 @yield('custom-scripts')
 
