@@ -260,7 +260,7 @@
                                         <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
                                     </div>
                                     <!-- /.direct-chat-info -->
-                                    <img class="direct-chat-img" src="/dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                                    <img class="direct-chat-img" src="{{url('/dist/img/user1-128x128.jpg')}}" alt="message user image"><!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
                                         Is this template really for free? That's unbelievable!
                                     </div>
@@ -275,7 +275,7 @@
                                         <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
                                     </div>
                                     <!-- /.direct-chat-info -->
-                                    <img class="direct-chat-img" src="/dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                                    <img class="direct-chat-img" src="{{url('/dist/img/user3-128x128.jpg')}}" alt="message user image"><!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
                                         You better believe it!
                                     </div>
@@ -290,7 +290,7 @@
                                         <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
                                     </div>
                                     <!-- /.direct-chat-info -->
-                                    <img class="direct-chat-img" src="/dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                                    <img class="direct-chat-img" src="{{url('/dist/img/user1-128x128.jpg')}}" alt="message user image"><!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
                                         Working with AdminLTE on a great new app! Wanna join?
                                     </div>
@@ -305,7 +305,7 @@
                                         <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
                                     </div>
                                     <!-- /.direct-chat-info -->
-                                    <img class="direct-chat-img" src="/dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+                                    <img class="direct-chat-img" src="{{url('/dist/img/user3-128x128.jpg')}}" alt="message user image"><!-- /.direct-chat-img -->
                                     <div class="direct-chat-text">
                                         I would love to.
                                     </div>
@@ -321,7 +321,7 @@
                                 <ul class="contacts-list">
                                     <li>
                                         <a href="#">
-                                            <img class="contacts-list-img" src="/dist/img/user1-128x128.jpg" alt="User Image">
+                                            <img class="contacts-list-img" src="{{url('/dist/img/user1-128x128.jpg')}}" alt="User Image">
 
                                             <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -336,7 +336,7 @@
                                     <!-- End Contact Item -->
                                     <li>
                                         <a href="#">
-                                            <img class="contacts-list-img" src="/dist/img/user7-128x128.jpg" alt="User Image">
+                                            <img class="contacts-list-img" src="{{url('/dist/img/user7-128x128.jpg')}}" alt="User Image">
 
                                             <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -351,7 +351,7 @@
                                     <!-- End Contact Item -->
                                     <li>
                                         <a href="#">
-                                            <img class="contacts-list-img" src="/dist/img/user3-128x128.jpg" alt="User Image">
+                                            <img class="contacts-list-img" src="{{url('/dist/img/user3-128x128.jpg')}}" alt="User Image">
 
                                             <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -366,7 +366,7 @@
                                     <!-- End Contact Item -->
                                     <li>
                                         <a href="#">
-                                            <img class="contacts-list-img" src="/dist/img/user5-128x128.jpg" alt="User Image">
+                                            <img class="contacts-list-img" src="{{url('/dist/img/user5-128x128.jpg')}}" alt="User Image">
 
                                             <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -381,7 +381,7 @@
                                     <!-- End Contact Item -->
                                     <li>
                                         <a href="#">
-                                            <img class="contacts-list-img" src="/dist/img/user6-128x128.jpg" alt="User Image">
+                                            <img class="contacts-list-img" src="{{url('/dist/img/user6-128x128.jpg')}}" alt="User Image">
 
                                             <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -396,7 +396,7 @@
                                     <!-- End Contact Item -->
                                     <li>
                                         <a href="#">
-                                            <img class="contacts-list-img" src="/dist/img/user8-128x128.jpg" alt="User Image">
+                                            <img class="contacts-list-img" src="{{url('/dist/img/user8-128x128.jpg')}}" alt="User Image">
 
                                             <div class="contacts-list-info">
                                 <span class="contacts-list-name">
@@ -457,7 +457,7 @@
                             <ul class="products-list product-list-in-box">
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                        <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
                                         <a href="javascript:void(0)" class="product-title">Course 1
@@ -469,7 +469,7 @@
                                 <!-- /.item -->
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                        <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
                                         <a href="javascript:void(0)" class="product-title">Course 2
@@ -482,7 +482,7 @@
                                 <!-- /.item -->
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                        <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
                                         <a href="javascript:void(0)" class="product-title">Course 3 <!-- <span class="label label-danger pull-right">$350</span> --></a>
@@ -494,7 +494,7 @@
                                 <!-- /.item -->
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                        <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
                                         <a href="javascript:void(0)" class="product-title">Course 4
@@ -556,7 +556,7 @@
                     <ul class="products-list product-list-in-box">
                         <li class="item">
                             <div class="product-img">
-                                <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title">Assignment 1
@@ -569,7 +569,7 @@
                         <!-- /.item -->
                         <li class="item">
                             <div class="product-img">
-                                <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title">Assignment 2
@@ -582,7 +582,7 @@
                         <!-- /.item -->
                         <li class="item">
                             <div class="product-img">
-                                <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title">Assignment 3 <!-- <span class="label label-danger pull-right">$350</span> --></a>
@@ -594,7 +594,7 @@
                         <!-- /.item -->
                         <li class="item">
                             <div class="product-img">
-                                <img src="/dist/img/default-50x50.gif" alt="Product Image">
+                                <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title">Assignment 4
@@ -630,12 +630,12 @@
 
 @section('custom-scripts')
     <!-- jvectormap -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="{{url('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+    <script src="{{url('plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
     <!-- ChartJS 1.0.1 -->
-    <script src="plugins/chartjs/Chart.min.js"></script>
+    <script src="{{url('plugins/chartjs/Chart.min.js')}}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard2.js"></script>
+    <script src="{{url('dist/js/pages/dashboard2.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+    <script src="{{url('dist/js/demo.js')}}"></script>
 @endsection
