@@ -1,7 +1,7 @@
 @extends('layouts.lti')
 
 @section('site-title')
-    Courses
+    Modules
 @endsection
 
 @section('custom-styles')
@@ -52,15 +52,15 @@
 @endsection
 
 @section('mini-logo-title')
-    Courses
+    Modules
 @endsection
 
 @section('logo-title')
-    Courses
+    Modules
 @endsection
 
 @section('page-title')
-    Courses
+    Modules
 @endsection
 
 @section('content')

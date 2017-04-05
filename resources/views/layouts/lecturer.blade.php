@@ -344,7 +344,7 @@
 
                 <li class="treeview {{ (Route::currentRouteName() == 'courses' || Route::currentRouteName() == 'courses.create') ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-edit"></i> <span>Courses</span>
+                        <i class="fa fa-edit"></i> <span>Modules</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
