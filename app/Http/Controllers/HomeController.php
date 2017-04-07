@@ -30,6 +30,7 @@ class HomeController extends Controller
         if (laravel_lti()->is_learner(auth()->user())) {
             return view('lti.dashboards.student');
         }
+        //Return Default
         return view('admin.dashboards.dashboard');
     }
 }

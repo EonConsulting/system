@@ -1,7 +1,7 @@
 @extends('layouts.lecturer')
 
 @section('site-title')
-    Courses
+    Modules
 @endsection
 
 @section('custom-styles')
@@ -21,7 +21,7 @@
 @endsection
 
 @section('page-title')
-    Courses
+    Modules
 @endsection
 
 @section('content')
@@ -31,7 +31,7 @@
             <div class="col-md-12">
                 <input type="hidden" id="tok" value="{{ csrf_token() }}" />
                 <div class="panel panel-default">
-                    <div class="panel-heading">Courses <a href="{{ route('courses.create') }}" class="btn btn-primary btn-xs"><span class="fa fa-plus"></span></a><div class="col-md-6 pull-right"><input type="text" id="txt_search" class="form-control" onkeyup="search()" placeholder="Search Courses.."></div><div class="clearfix"></div></div>
+                    <div class="panel-heading">Modules <a href="{{ route('courses.create') }}" class="btn btn-primary btn-xs"><span class="fa fa-plus"></span></a><div class="col-md-6 pull-right"><input type="text" id="txt_search" class="form-control" onkeyup="search()" placeholder="Search Courses.."></div><div class="clearfix"></div></div>
                     <table class="panel-body table table-hover table-striped" id="courses-table">
                         <thead>
                         <tr>

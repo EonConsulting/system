@@ -13842,7 +13842,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         console.log('Component ready.');
         $('#tok').val(window.Laravel.csrfToken);
 
-        var url = '/lecturer/courses/{course}/storyline/feed';
+        // Current Host URI - Peace Edits
+        //var hostURI = document.location.host;
+        var url = 'lecturer/courses/{course}/storyline/feed';
         url = url.replace('{course}', this.courseid);
         var self = this;
 
@@ -37868,6 +37870,8 @@ function plugin(Vue) {
 
     Vue.url = Url;
     Vue.http = Http;
+	// Vue.http.options.root = 'https://dev.unisaonline.net/e-content'
+	Vue.http.options.root = 'http://localhost:8000'
     Vue.resource = Resource;
     Vue.Promise = PromiseObj;
 

@@ -456,10 +456,14 @@
                                         <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
+<<<<<<< HEAD
                                         <a href="javascript:void(0)" class="product-title">Module  1
+=======
+                                        <a href="javascript:void(0)" class="product-title">Module 1
+>>>>>>> 188297f4903192a5cfacd350b646814dd4681a9e
                                             <!-- <span class="label label-warning pull-right">$1800</span></a> -->
                                             <span class="product-description">
-                          Description of the course.
+                          Description of the module.
                                                     </span></a></div>
                                 </li>
                                 <!-- /.item -->
@@ -468,10 +472,10 @@
                                         <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
-                                        <a href="javascript:void(0)" class="product-title">Course 2
+                                        <a href="javascript:void(0)" class="product-title">Module 2
                                             <!-- <span class="label label-info pull-right">$700</span> --></a>
                                         <span class="product-description">
-                           Description of the course.
+                           Description of the module.
                         </span>
                                     </div>
                                 </li>
@@ -481,9 +485,9 @@
                                         <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
-                                        <a href="javascript:void(0)" class="product-title">Course 3 <!-- <span class="label label-danger pull-right">$350</span> --></a>
+                                        <a href="javascript:void(0)" class="product-title">Module 3 <!-- <span class="label label-danger pull-right">$350</span> --></a>
                                         <span class="product-description">
-                          Description of the course.
+                          Description of the module.
                         </span>
                                     </div>
                                 </li>
@@ -493,10 +497,10 @@
                                         <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
-                                        <a href="javascript:void(0)" class="product-title">Course 4
+                                        <a href="javascript:void(0)" class="product-title">Module 4
                                             <!-- <span class="label label-success pull-right">$399</span> --></a>
                                         <span class="product-description">
-                            Description of the course.
+                            Description of the module.
                         </span>
                                     </div>
                                 </li>
@@ -505,7 +509,7 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer text-center">
-                            <a href="javascript:void(0)" class="uppercase">View All courses</a>
+                            <a href="javascript:void(0)" class="uppercase">View All modules</a>
                         </div>
                         <!-- /.box-footer -->
                     </div>

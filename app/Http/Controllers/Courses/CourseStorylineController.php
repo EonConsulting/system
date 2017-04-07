@@ -59,6 +59,9 @@ class CourseStorylineController extends Controller {
 
     public function get(Course $course) {
         $storyline = $course->latest_storyline();
+        if(!$storyline) {
+            return ['course' => $course, 'storyline' => [], 'items' => [], 'parts' => []];
+        }
         $items = $storyline->items;
 
         $tree = $this->get_storyline($items->toArray());

@@ -1,7 +1,7 @@
 @extends('layouts.lecturer')
 
 @section('site-title')
-    Courses
+    Modules
 @endsection
 
 @section('custom-styles')
@@ -21,7 +21,7 @@
 @endsection
 
 @section('page-title')
-    Courses
+    Modules
 @endsection
 
 @section('content')

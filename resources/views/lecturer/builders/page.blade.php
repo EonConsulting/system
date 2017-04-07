@@ -119,6 +119,7 @@
             toolbar: [[ 'LTIButton' ]]
         };
     </script>
+
     <script>
         $(function(){
 

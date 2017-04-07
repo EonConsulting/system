@@ -1,7 +1,7 @@
 @extends('layouts.lecturer')
 
 @section('site-title')
-    Create a Course
+    Create a Module
 @endsection
 
 @section('custom-styles')
@@ -21,7 +21,7 @@
 @endsection
 
 @section('page-title')
-    Create a Course
+    Create a Module
 @endsection
 
 @section('content')
