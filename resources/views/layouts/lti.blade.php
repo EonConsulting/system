@@ -134,7 +134,7 @@
 
                 <li class="{{ (Route::currentRouteName() == 'lti.courses') ? 'active' : '' }}">
                     <a href="{{ route('lti.courses') }}">
-                        <i class="fa fa-list"></i> <span>Courses</span>
+                        <i class="fa fa-list"></i> <span>Modules</span>
                         <span class="pull-right-container"></span>
                     </a>
                 </li>

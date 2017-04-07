@@ -14,8 +14,6 @@
 
 @section('user-image')
 
-{{ url('/dist/img/user5-128x128.jpg') }}
-
 {{url('/dist/img/user5-128x128.jpg')}}
 
 @endsection

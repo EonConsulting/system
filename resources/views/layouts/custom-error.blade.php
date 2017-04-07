@@ -25,12 +25,19 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"></script></head>
     <![endif]-->
+
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
 
     @yield('custom-styles')
 </head>
 <body class="hold-transition sidebar-mini skin-black @yield('body-class')">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
     <header class="main-header">
 
@@ -48,6 +55,8 @@
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">   <i class="fa fa-arrow-left"></i>
                 <span class="sr-only">Toggle navigation</span>
             </a>
+
+
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
 
@@ -61,13 +70,13 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="header">You have 4 messages</li>
-                      b      <li>
+                            <li>
                                 <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="{{url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                                                <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Support Team
@@ -80,7 +89,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="{{ url('/dist/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
+                                                <img src="{{url('/dist/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 AdminLTE Design Team
@@ -116,7 +125,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="{{ url('/dist/img/user4-128x128.jpg') }}" class="img-circle" alt="User Image">
+                                                <img src="{{url('/dist/img/user4-128x128.jpg') }}" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Reviewers
@@ -249,20 +258,20 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">{{ auth()->user()->name }}</span>
+                            <img src="{{url('/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
+                            <span class="hidden-xs"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                                <img src="{{url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                                 <p>
-                                    {{ auth()->user()->name }}
+                                    
                                 </p>
                             </li>
                             <!-- Menu Body -->
-               
+                       
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
@@ -290,27 +299,29 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                    <img src="{{url('/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>{{ auth()->user()->name }}</p>
+                    <p></p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
+            <!-- search form -->
 
+            <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">Administrator</li>
 
                 <li class="{{ (Route::currentRouteName() == 'home') ? 'active' : '' }}">
                     <a href="{{ url('/home') }}">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        <i class="fa fa-braille"></i> <span>Dashboard</span>
                         <span class="pull-right-container"></span>
                     </a>
                 </li>
                 <li class="treeview {{ (Route::currentRouteName() == 'eon.admin.groups' || Route::currentRouteName() == 'eon.admin.permissions' || Route::currentRouteName() == 'eon.admin.roles' || Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-legal"></i> <span>Roles and Permissions</span>
+                        <i class="fa fa-user-circle"></i> <span>Roles and Permissions</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
@@ -322,16 +333,16 @@
                         <li class="{{ (Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}"><a href="{{ route('eon.admin.roles.users') }}"><i class="fa fa-circle-o"></i> Users</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="pages/examples/default-page.html">
-                        <i class="fa fa-book"></i> <span>Default Page </span>
+                <li class="{{ (Route::currentRouteName() == 'content.builder') ? 'active' : '' }}">
+                    <a href="{{ route('content.builder') }}">
+                        <i class="fa fa-book"></i> <span>Content Builder</span>
                         <span class="pull-right-container">
 
             </span>
                     </a>
                 </li>
 
-                <li class="treeview {{ (Route::currentRouteName() == 'courses') ? 'active' : '' }}">
+                <li class="treeview {{ (Route::currentRouteName() == 'courses' || Route::currentRouteName() == 'courses.create') ? 'active' : '' }}">
                     <a href="#">
                         <i class="fa fa-edit"></i> <span>Modules</span>
                         <span class="pull-right-container">
@@ -343,50 +354,13 @@
                         <li class="{{ (Route::currentRouteName() == 'courses.create') ? 'active' : '' }}"><a href="{{ route('courses.create') }}"><i class="fa fa-circle-o"></i> Create</a></li>
                     </ul>
                 </li>
-
-
-                <li>
-                    <a href="pages/chat.html">
-                        <i class="fa fa-th"></i> <span>Chat</span>
+                <li class="{{ (Route::currentRouteName() == 'eon.laravellti.appstore') ? 'active' : '' }}">
+                    <a href="{{ route('eon.laravellti.appstore') }}">
+                        <i class="fa fa-th"></i> <span>App Store</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>
                     </a>
-                </li>
-                <li>
-                    <a href="pages/mailbox/mailbox.html">
-                        <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/widgets.html">
-                        <i class="fa fa-th"></i> <span>Widgets</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-pie-chart"></i>
-                        <span>Charts</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-
-
-
-                        </li>
-
-                    </ul>
                 </li>
             </ul>
         </section>
@@ -621,17 +595,18 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="{{ url('/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+<script src="{{url('/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
+@yield('app-js')
 <!-- Bootstrap 3.3.6 -->
-<script src="{{ url('/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{url('/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- FastClick -->
-<script src="{{ url('/plugins/fastclick/fastclick.js') }}"></script>
+<script src="{{url('/plugins/fastclick/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{ url('/dist/js/app.js') }}"></script>
+<script src="{{url('/dist/js/app.js')}}"></script>
 <!-- Sparkline -->
-<script src="{{ url('/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+<script src="{{url('/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
 <!-- SlimScroll 1.3.0 -->
-<script src="{{ url('/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+<script src="{{url('/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
 
 @yield('custom-scripts')
 
