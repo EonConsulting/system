@@ -16,8 +16,6 @@
 
 {{url('/dist/img/user5-128x128.jpg')}}
 
-
-
 @endsection
 
 @section('mini-logo-title')
