@@ -9,7 +9,7 @@
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- jvectormap -->
@@ -129,7 +129,7 @@
 
                 <li class="{{ (Route::currentRouteName() == 'lti.dashboards') ? 'active' : '' }}">
                     <a href="{{ route('lti.dashboards')}}">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        <i class="fa fa-braille"></i> <span>Dashboard</span>
                         <span class="pull-right-container"></span>
                     </a>
                 </li>
