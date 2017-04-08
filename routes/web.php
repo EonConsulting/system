@@ -32,8 +32,8 @@ Route::get('/logout', function()
     return Redirect::to('/home');
 });
 
-Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {
-//Route::group(['middleware' => ['auth', 'instructor'], 'prefix' => '/lecturer'], function() { // TODO::replace
+//Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {// TODO::replace-test
+Route::group(['middleware' => ['auth', 'instructor'], 'prefix' => '/lecturer'], function() {
     Route::group(['prefix' => '/courses', 'namespace' => 'Courses'], function() {
         Route::get('/', ['as' => 'courses', 'uses' => 'CoursesController@index']);
         Route::get('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@index']);

@@ -16,6 +16,8 @@
 | Style Overrides by Peace Ngara - Skinning the App - Putting it on Steroids
 |------------------------------------------------------------------------------------
 */
+
+/**  Black Skin **/
 .skin-black .main-header {min-height: 70px !important; box-shadow: 0 2px 4px 0 #e6e9ed !important;
   background: #ffffff;}
 .main-header .logo {min-height: 70px !important; line-height: 70px !important; }
@@ -27,6 +29,7 @@
 .sidebar-menu > li > a {padding: 15px 5px 15px 15px !important}
 .skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {background: #f1f1f1 !important;
 border-right: 1px solid #eee}
+
 .skin-black .sidebar-form {width:300px !important; display: inline-block; border:1px solid #d2d6de !important;}
 .skin-black .sidebar-form input[type="text"], .skin-black .sidebar-form .btn {background-color:transparent !important;height:42px !important; padding:0 8px !important}
 .skin-black .sidebar-menu>li.header {
@@ -43,6 +46,8 @@ border-right: 1px solid #eee}
   background: #fff !important;
   border-left-color: #fff;
 }
+
+.skin-black .user-panel>.info, .skin-black .user-panel>.info>a {color:#1c406d !important}
 .sidebar-menu > li > a > .fa, .sidebar-menu > li > a > .glyphicon, .sidebar-menu > li > a > .ion {
   width: 30px !important;
   font-size: 18px !important;
@@ -63,6 +68,38 @@ border-right: 1px solid #eee}
 }
 #cke_ltieditorv2inst {border:1px solid #eee}
 
+/** Light Blue Scheme **/
+.skin-blue-light .main-header {min-height: 70px !important; box-shadow: 0 2px 4px 0 #e6e9ed !important;
+  background: #ffffff;}
+.main-header .logo {min-height: 70px !important; line-height: 70px !important; }
+.skin-blue-light .main-header .navbar>.sidebar-toggle {min-height:70px !important}
+.main-header .navbar-custom-menu, .main-header .navbar-right {min-height: 70px !important}
+.navbar-nav>li>a {min-height:70px; padding-top:35px; }
+.main-sidebar, .left-side {padding-top:70px !important}
+.skin-blue-light .sidebar a {border-bottom: 2px solid rgba(0,0,0,.05) !important;border-top: 1px solid #f4f4f4 !important; color: rgba(0,0,0,0.87) !important}
+.sidebar-menu > li > a {padding: 15px 5px 15px 15px !important}
+.skin-blue-light .wrapper, .skin-blue-light .main-sidebar, .skin-blue-light .left-side {background: #f1f1f1 !important;
+  border-right: 1px solid #eee}
+
+.skin-blue-light .sidebar-form {width:300px !important; display: inline-block; border:1px solid #d2d6de !important;}
+.skin-blue-light .sidebar-form input[type="text"], .skin-blue-light .sidebar-form .btn {background-color:transparent !important;height:42px !important; padding:0 8px !important}
+.skin-blue-light .sidebar-menu>li.header {
+  color: #333 !important;
+  background: #ccc !important;
+  height: 50px;
+  padding-top: 18px;
+  font-weight: bold;
+}
+.skin-blue-light .wrapper, .skin-blue-light .main-sidebar, .skin-blue-light .left-side {background: #f1f1f1 !important;
+  border-right: 1px solid #eee}
+.skin-blue-light .sidebar-menu>li>.treeview-menu {background: #fff !important}
+.skin-blue-light.user-panel>.info, .skin-blue-light .user-panel>.info>a {color:#1c406d !important}
+.skin-blue-light .sidebar-menu>li:hover>a, .skin-blue-light .sidebar-menu>li.active>a {
+  color: #fff;
+  background: #fff !important;
+  border-left-color: #fff;
+}
+
 /*-------------------------------------------------------------------------------------
 | End Peace Styles To Revert to Default Styles Just remove Peace Overrides
 |--------------------------------------------------------------------------------------
@@ -76,12 +113,14 @@ body {
   height: 100%;
 }
 body {
-  font-family: 'OpenSans','Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family:arial;
+  font-weight: normal;
   overflow-x: hidden;
   overflow-y: auto;
 
 }
+
+p {  margin-top: 0;  margin-bottom: 1rem;  font-size: 13px;  }
 /*custom styles */
 .editProfile {
   display:inline-block;
