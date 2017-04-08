@@ -61,7 +61,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="header">You have 4 messages</li>
-                      b      <li>
+                           <li>
                                 <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
                                     <li><!-- start message -->
@@ -269,7 +269,7 @@
                                     <a href="pages/examples/profile.html" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="pages/examples/login.html" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="{{route('logout')}}" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -304,13 +304,13 @@
 
                 <li class="{{ (Route::currentRouteName() == 'home') ? 'active' : '' }}">
                     <a href="{{ url('/home') }}">
-                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        <i class="fa fa-braille"></i> <span>Dashboard</span>
                         <span class="pull-right-container"></span>
                     </a>
                 </li>
                 <li class="treeview {{ (Route::currentRouteName() == 'eon.admin.groups' || Route::currentRouteName() == 'eon.admin.permissions' || Route::currentRouteName() == 'eon.admin.roles' || Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}">
                     <a href="#">
-                        <i class="fa fa-legal"></i> <span>Roles and Permissions</span>
+                        <i class="fa fa-user-circle"></i> <span>Roles and Permissions</span>
                         <span class="pull-right-container">
                           <i class="fa fa-angle-left pull-right"></i>
                         </span>
@@ -322,9 +322,10 @@
                         <li class="{{ (Route::currentRouteName() == 'eon.admin.roles.users') ? 'active' : '' }}"><a href="{{ route('eon.admin.roles.users') }}"><i class="fa fa-circle-o"></i> Users</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="pages/examples/default-page.html">
-                        <i class="fa fa-book"></i> <span>Default Page </span>
+
+                <li class="{{ (Route::currentRouteName() == 'content.builder') ? 'active' : '' }}">
+                    <a href="{{ route('content.builder') }}">
+                        <i class="fa fa-book"></i> <span>Content Builder</span>
                         <span class="pull-right-container">
 
             </span>
@@ -343,54 +344,13 @@
                         <li class="{{ (Route::currentRouteName() == 'courses.create') ? 'active' : '' }}"><a href="{{ route('courses.create') }}"><i class="fa fa-circle-o"></i> Create</a></li>
                     </ul>
                 </li>
-<<<<<<< HEAD
-
-
-                <li>
-                    <a href="pages/chat.html">
-                        <i class="fa fa-th"></i> <span>Chat</span>
+                <li class="{{ (Route::currentRouteName() == 'eon.laravellti.appstore') ? 'active' : '' }}">
+                    <a href="{{ route('eon.laravellti.appstore') }}">
+                        <i class="fa fa-th"></i> <span>App Store</span>
                         <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span>
                     </a>
-                </li>
-                <li>
-                    <a href="pages/mailbox/mailbox.html">
-                        <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="pages/widgets.html">
-                        <i class="fa fa-th"></i> <span>Widgets</span>
-                        <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-pie-chart"></i>
-                        <span>Charts</span>
-                        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-
-=======
->>>>>>> d6bed615e183a3da2d67e407bbc9777623b33c0c
-
-    
-
-       
-
-                    </ul>
                 </li>
             </ul>
         </section>
@@ -402,7 +362,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                @yield('page-title')
+                @yield('site-title')
                 <!--   <small>Version 2.0</small> -->
             </h1>
             @yield('breadcrumbs')
@@ -415,7 +375,6 @@
         <!-- Main content -->
         <section class="content">
             @yield('content')
-
         </section>
         <!-- /.content -->
     </div>
