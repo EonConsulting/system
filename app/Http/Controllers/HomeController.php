@@ -26,11 +26,14 @@ class HomeController extends Controller
         // check if user has any roles, if not
 //        return view('landing.todo');
 
+//        dd(laravel_lti()->is_learner(auth()->user()));
+
+
         // else
         if (laravel_lti()->is_learner(auth()->user())) {
             return view('lti.dashboards.student');
         }
-        //Return Default
+
         return view('admin.dashboards.dashboard');
     }
 }

@@ -33,7 +33,9 @@ Route::get('/logout', function()
 });
 
 //Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {// TODO::replace-test
-Route::group(['middleware' => ['auth', 'instructor'], 'prefix' => '/lecturer'], function() {
+//Instructor, auth, Sysadmin
+//Route::group(['middleware' => ['auth', 'instructor'], 'prefix' => '/lecturer'], function() {  TODO::replace-test
+Route::group(['middleware' => ['auth'], 'prefix' => '/lecturer'], function() {
     Route::group(['prefix' => '/courses', 'namespace' => 'Courses'], function() {
         Route::get('/', ['as' => 'courses', 'uses' => 'CoursesController@index']);
         Route::get('/create', ['as' => 'courses.create', 'uses' => 'CreateCourseController@index']);
@@ -55,7 +57,8 @@ Route::group(['middleware' => ['auth', 'instructor'], 'prefix' => '/lecturer'], 
     });
 });
 
-Route::group(['prefix' => '/lti', 'middleware' => ['auth'], 'namespace' => 'LTI'], function() {
+//Route::group(['prefix' => '/lti', 'middleware' => ['auth'], 'namespace' => 'LTI'], function() {
+Route::group(['prefix' => '/lti', 'namespace' => 'LTI'], function() {
     Route::group(['namespace' => 'Dashboards'], function() {
         Route::match(['get', 'post'], '/', ['as' => 'lti.dashboards', 'uses' => 'DashboardLTIController@index']);
     });
