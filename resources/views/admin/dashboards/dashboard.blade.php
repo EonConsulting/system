@@ -456,15 +456,14 @@
                                         <img src="{{url('/dist/img/default-50x50.gif')}}" alt="Product Image">
                                     </div>
                                     <div class="product-info">
-<<<<<<< HEAD
-                                        <a href="javascript:void(0)" class="product-title">Module  1
-=======
+
+                                        
+
                                         <a href="javascript:void(0)" class="product-title">Module 1
->>>>>>> 188297f4903192a5cfacd350b646814dd4681a9e
-                                            <!-- <span class="label label-warning pull-right">$1800</span></a> -->
+                                            <!-- <span class="label label-warning pull-right">$1800</span></a> --> </a>
                                             <span class="product-description">
                           Description of the module.
-                                                    </span></a></div>
+                                                    </span></div>
                                 </li>
                                 <!-- /.item -->
                                 <li class="item">
@@ -560,11 +559,11 @@
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title">Assignment 1
-                                    <!-- <span class="label label-warning pull-right">$1800</span></a> -->
+                                    <!-- <span class="label label-warning pull-right">$1800</span></a> --> </a>
                                     <span class="product-description">
                           Covers topics A-F its due on tuesday.
                         </span>
-                                </a></div>
+                                </div>
                         </li>
                         <!-- /.item -->
                         <li class="item">
