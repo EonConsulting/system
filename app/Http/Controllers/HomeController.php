@@ -34,6 +34,12 @@ class HomeController extends Controller
             return view('lti.dashboards.student');
         }
 
-        return view('admin.dashboards.dashboard');
+        if (laravel_lti()->is_instructor(auth()->user())) {
+            return view('lti.dashboards.lecturer');
+        }
+
+//        return view('admin.dashboards.dashboard'); Todo::replace
+        return view('lti.dashboards.student');
+        //return view('admin.dashboards.student');
     }
 }
