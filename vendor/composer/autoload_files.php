@@ -31,4 +31,6 @@ return array(
     '9287d16aba9daeb44f3caf65d4c032d0' => $baseDir . '/packages/PHPSaasWrapper/src/Http/helpers.php',
     '02d8c313c0c4d71ac54e4e3a97d6f6e6' => $baseDir . '/packages/ck-editor-plugin-v2/src/functions.php',
     'e41a5ff40a148b0a354c328e30aaf23e' => $baseDir . '/packages/ImgProcessor/src/functions.php',
+    '6c53bc306d1cfdd579d82bd64ec9bcb4' => $baseDir . '/packages/Graphs/src/Http/helpers.php',
+    '9718aa0e4f1802f2d7f9c0b5774a4375' => $baseDir . '/packages/MindMap/src/Http/helpers.php',
 );

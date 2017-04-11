@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+Initialise EON LTI Components
+*/
+//Route::get('/mindmapinit', function () {
+//    return mindmap()->getNowMindMap();
+//});
+
 
 Route::get('/', function () {
 //    return laravel_lti()->launch('https://dev.unisaonline.net/mahara/auth/blti/login/login.php', 'unisa', '12345');

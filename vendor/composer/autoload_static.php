@@ -32,6 +32,8 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         '9287d16aba9daeb44f3caf65d4c032d0' => __DIR__ . '/../..' . '/packages/PHPSaasWrapper/src/Http/helpers.php',
         '02d8c313c0c4d71ac54e4e3a97d6f6e6' => __DIR__ . '/../..' . '/packages/ck-editor-plugin-v2/src/functions.php',
         'e41a5ff40a148b0a354c328e30aaf23e' => __DIR__ . '/../..' . '/packages/ImgProcessor/src/functions.php',
+        '6c53bc306d1cfdd579d82bd64ec9bcb4' => __DIR__ . '/../..' . '/packages/Graphs/src/Http/helpers.php',
+        '9718aa0e4f1802f2d7f9c0b5774a4375' => __DIR__ . '/../..' . '/packages/MindMap/src/Http/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -130,8 +132,10 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
             'EONConsulting\\Storyline\\Core\\' => 29,
             'EONConsulting\\RolesPermissions\\' => 31,
             'EONConsulting\\PHPSaasWrapper\\' => 29,
+            'EONConsulting\\MindMap\\' => 22,
             'EONConsulting\\LaravelLTI\\' => 25,
             'EONConsulting\\ImgProcessor\\' => 27,
+            'EONConsulting\\Graphs\\' => 21,
             'EONConsulting\\FileManager\\' => 26,
             'EONConsulting\\CKEditorPluginV2\\' => 31,
             'EONConsulting\\AppStore\\' => 23,
@@ -379,6 +383,10 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         array (
             0 => __DIR__ . '/../..' . '/packages/PHPSaasWrapper/src',
         ),
+        'EONConsulting\\MindMap\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/MindMap/src',
+        ),
         'EONConsulting\\LaravelLTI\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/laravel-lti/src',
@@ -386,6 +394,10 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'EONConsulting\\ImgProcessor\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/ImgProcessor/src',
+        ),
+        'EONConsulting\\Graphs\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/Graphs/src',
         ),
         'EONConsulting\\FileManager\\' => 
         array (
@@ -706,6 +718,10 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'EONConsulting\\FileManager\\FileManagerServiceProvider' => __DIR__ . '/../..' . '/packages/file-manager/src/FileManagerServiceProvider.php',
         'EONConsulting\\FileManager\\Http\\Controllers\\EditorController' => __DIR__ . '/../..' . '/packages/file-manager/src/Http/Controllers/EditorController.php',
         'EONConsulting\\FileManager\\Http\\Controllers\\FileManagerController' => __DIR__ . '/../..' . '/packages/file-manager/src/Http/Controllers/FileManagerController.php',
+        'EONConsulting\\Graphs\\Graphs' => __DIR__ . '/../..' . '/packages/Graphs/src/Graphs.php',
+        'EONConsulting\\Graphs\\GraphsServiceProvider' => __DIR__ . '/../..' . '/packages/Graphs/src/GraphsServiceProvider.php',
+        'EONConsulting\\Graphs\\Http\\Controllers\\TestStencilController' => __DIR__ . '/../..' . '/packages/Graphs/src/Http/Controllers/TestStencilController.php',
+        'EONConsulting\\Graphs\\src\\Models\\GraphModel' => __DIR__ . '/../..' . '/packages/Graphs/src/Models/GraphModel.php',
         'EONConsulting\\ImgProcessor\\Facades\\ImgProcessor' => __DIR__ . '/../..' . '/packages/ImgProcessor/src/Facades/ImgProcessor.php',
         'EONConsulting\\ImgProcessor\\Http\\Controllers\\ImgDetail' => __DIR__ . '/../..' . '/packages/ImgProcessor/src/Http/Controllers/ImgDetail.php',
         'EONConsulting\\ImgProcessor\\ImgProcessor' => __DIR__ . '/../..' . '/packages/ImgProcessor/src/ImgProcessor .php',
@@ -726,6 +742,11 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'EONConsulting\\LaravelLTI\\Models\\LTIDomain' => __DIR__ . '/../..' . '/packages/laravel-lti/src/Models/LTIDomain.php',
         'EONConsulting\\LaravelLTI\\Models\\LTIKey' => __DIR__ . '/../..' . '/packages/laravel-lti/src/Models/LTIKey.php',
         'EONConsulting\\LaravelLTI\\Models\\UserLTILink' => __DIR__ . '/../..' . '/packages/laravel-lti/src/Models/UserLTILink.php',
+        'EONConsulting\\MindMap\\Http\\Controllers\\TestStencilController' => __DIR__ . '/../..' . '/packages/MindMap/src/Http/Controllers/TestStencilController.php',
+        'EONConsulting\\MindMap\\MindLogic' => __DIR__ . '/../..' . '/packages/MindMap/src/Http/Controllers/MindLogic.php',
+        'EONConsulting\\MindMap\\MindMap' => __DIR__ . '/../..' . '/packages/MindMap/src/MindMap.php',
+        'EONConsulting\\MindMap\\MindMapServiceProvider' => __DIR__ . '/../..' . '/packages/MindMap/src/MindMapServiceProvider.php',
+        'EONConsulting\\MindMap\\src\\Models\\MindMapModel' => __DIR__ . '/../..' . '/packages/MindMap/src/Models/MindMapModel.php',
         'EONConsulting\\PHPSaasWrapper\\Models\\ServiceAvailable' => __DIR__ . '/../..' . '/packages/PHPSaasWrapper/src/Models/ServiceAvailable.php',
         'EONConsulting\\PHPSaasWrapper\\Models\\ServiceLinked' => __DIR__ . '/../..' . '/packages/PHPSaasWrapper/src/Models/ServiceLinked.php',
         'EONConsulting\\PHPSaasWrapper\\OAuth\\OAuthEnum' => __DIR__ . '/../..' . '/packages/PHPSaasWrapper/src/OAuth/OAuthEnum.php',
@@ -846,7 +867,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\cs_CZ\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/Payment.php',
         'Faker\\Provider\\cs_CZ\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/Person.php',
         'Faker\\Provider\\cs_CZ\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/PhoneNumber.php',
-        'Faker\\Provider\\cs_CZ\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/cs_CZ/Text.php',
         'Faker\\Provider\\da_DK\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/da_DK/Address.php',
         'Faker\\Provider\\da_DK\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/da_DK/Company.php',
         'Faker\\Provider\\da_DK\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/da_DK/Internet.php',
@@ -879,7 +899,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\el_GR\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/Payment.php',
         'Faker\\Provider\\el_GR\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/Person.php',
         'Faker\\Provider\\el_GR\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/PhoneNumber.php',
-        'Faker\\Provider\\el_GR\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/el_GR/Text.php',
         'Faker\\Provider\\en_AU\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/en_AU/Address.php',
         'Faker\\Provider\\en_AU\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/en_AU/Internet.php',
         'Faker\\Provider\\en_AU\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/en_AU/PhoneNumber.php',
@@ -965,7 +984,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\fr_FR\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/Payment.php',
         'Faker\\Provider\\fr_FR\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/Person.php',
         'Faker\\Provider\\fr_FR\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/PhoneNumber.php',
-        'Faker\\Provider\\fr_FR\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/fr_FR/Text.php',
         'Faker\\Provider\\he_IL\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/he_IL/Address.php',
         'Faker\\Provider\\he_IL\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/he_IL/Company.php',
         'Faker\\Provider\\he_IL\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/he_IL/Person.php',
@@ -979,7 +997,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\hu_HU\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/Payment.php',
         'Faker\\Provider\\hu_HU\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/Person.php',
         'Faker\\Provider\\hu_HU\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/PhoneNumber.php',
-        'Faker\\Provider\\hu_HU\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hu_HU/Text.php',
         'Faker\\Provider\\hy_AM\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hy_AM/Address.php',
         'Faker\\Provider\\hy_AM\\Color' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hy_AM/Color.php',
         'Faker\\Provider\\hy_AM\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/hy_AM/Company.php',
@@ -1024,7 +1041,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\ka_GE\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/Payment.php',
         'Faker\\Provider\\ka_GE\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/Person.php',
         'Faker\\Provider\\ka_GE\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/PhoneNumber.php',
-        'Faker\\Provider\\ka_GE\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ka_GE/Text.php',
         'Faker\\Provider\\kk_KZ\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/kk_KZ/Address.php',
         'Faker\\Provider\\kk_KZ\\Color' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/kk_KZ/Color.php',
         'Faker\\Provider\\kk_KZ\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/kk_KZ/Company.php',
@@ -1038,7 +1054,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\ko_KR\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Internet.php',
         'Faker\\Provider\\ko_KR\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Person.php',
         'Faker\\Provider\\ko_KR\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/PhoneNumber.php',
-        'Faker\\Provider\\ko_KR\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Text.php',
         'Faker\\Provider\\lt_LT\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Address.php',
         'Faker\\Provider\\lt_LT\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Company.php',
         'Faker\\Provider\\lt_LT\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Internet.php',
@@ -1112,7 +1127,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\ru_RU\\Payment' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/Payment.php',
         'Faker\\Provider\\ru_RU\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/Person.php',
         'Faker\\Provider\\ru_RU\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/PhoneNumber.php',
-        'Faker\\Provider\\ru_RU\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/ru_RU/Text.php',
         'Faker\\Provider\\sk_SK\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/sk_SK/Address.php',
         'Faker\\Provider\\sk_SK\\Company' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/sk_SK/Company.php',
         'Faker\\Provider\\sk_SK\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/sk_SK/Internet.php',
@@ -1151,7 +1165,6 @@ class ComposerStaticInit453d3555f83f6a806de2c5cfbd4fcd15
         'Faker\\Provider\\uk_UA\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Internet.php',
         'Faker\\Provider\\uk_UA\\Person' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Person.php',
         'Faker\\Provider\\uk_UA\\PhoneNumber' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/PhoneNumber.php',
-        'Faker\\Provider\\uk_UA\\Text' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/uk_UA/Text.php',
         'Faker\\Provider\\vi_VN\\Address' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/vi_VN/Address.php',
         'Faker\\Provider\\vi_VN\\Color' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/vi_VN/Color.php',
         'Faker\\Provider\\vi_VN\\Internet' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Provider/vi_VN/Internet.php',

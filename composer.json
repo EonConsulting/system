@@ -42,7 +42,9 @@
             "EONConsulting\\Storyline\\Menu\\": "packages/storyline-menu/src/",
             "EONConsulting\\PHPSaasWrapper\\": "packages/PHPSaasWrapper/src/",
             "EONConsulting\\CKEditorPluginV2\\": "packages/ck-editor-plugin-v2/src/",
-            "EONConsulting\\ImgProcessor\\": "packages/ImgProcessor/src/"
+            "EONConsulting\\ImgProcessor\\": "packages/ImgProcessor/src/",
+            "EONConsulting\\Graphs\\": "packages/Graphs/src/",
+            "EONConsulting\\MindMap\\": "packages/MindMap/src/"
         },
         "files": [
             "packages/laravel-lti/src/functions.php",
@@ -54,7 +56,9 @@
             "packages/storyline-menu/src/functions.php",
             "packages/PHPSaasWrapper/src/Http/helpers.php",
             "packages/ck-editor-plugin-v2/src/functions.php",
-            "packages/ImgProcessor/src/functions.php"
+            "packages/ImgProcessor/src/functions.php",
+            "packages/Graphs/src/Http/helpers.php",
+            "packages/MindMap/src/Http/helpers.php"
         ]
     },
     "autoload-dev": {

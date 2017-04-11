@@ -194,9 +194,10 @@ return [
         \EONConsulting\CKEditorPluginV2\CKEditorPluginV2ServiceProvider::class,
         \EONConsulting\ImgProcessor\ImgProcessorServiceProvider::class,
 //        \EONConsulting\CKEditorPlugin\CKEditorPluginServiceProvider::class,
-//        \EONConsulting\Graphs\GraphsServiceProvider::class,
+        \EONConsulting\Graphs\GraphsServiceProvider::class,
 //        \EONConsulting\PHPSaasWrapper\src\PHPSaasWrapperServiceProvider::class,
         //\EONConsulting\Storyline\Breadcrumbs\StorylineBreadcrumbServiceProvider::class,
+        \EONConsulting\MindMap\MindMapServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -273,9 +274,10 @@ return [
         'CKEditorV2' => \EONConsulting\CKEditorPluginV2\Facades\CKEditorPluginV2::class,
         'ImgProcessor' => \EONConsulting\ImgProcessor\Facades\ImgProcessor::class,
 //        'CKEditor' => \Packages\CKEditorPlugin\src\Facades\CKEditorPlugin::class,
-//        'Graphs' => \Packages\Graphs\src\Facades\Graphs::class,
+        'Graphs' => \Packages\Graphs\src\Facades\Graphs::class,
 //        'PHPSaasWrapper' => \EONConsulting\PHPSaasWrapper\src\Facades\PHPSaasWrapper::class,
         //'StorylineBreadcrumbs' => EONConsulting\Storyline\Breadcrumbs\StorylineBreadcrumbs::class,
+        'MindMap' => \EONConsulting\MindMap\Facades\MindMap::class,
     ],
 
 ];
