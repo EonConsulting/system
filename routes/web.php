@@ -64,6 +64,14 @@ Route::group(['prefix' => '/lti', 'namespace' => 'LTI'], function() {
     });
     Route::group(['namespace' => 'Users'], function() {
         Route::match(['get', 'post'], '/profile', ['as' => 'lti.users.profile', 'uses' => 'ProfileLTIController@index']);
+
+
+
+
+
+
+
+
         Route::match(['get', 'post'], '/profile/update', ['as' => 'lti.users.profile.update', 'uses' => 'ProfileLTIController@update']);
     });
     Route::group(['namespace' => 'Courses', 'prefix' => '/courses'], function() {
@@ -73,3 +81,5 @@ Route::group(['prefix' => '/lti', 'namespace' => 'LTI'], function() {
         Route::match(['get', 'post'], '/{course}/lectures/{storylineItem}', ['as' => 'lti.courses.single.lectures.item', 'uses' => 'CourseLectureItemLTIController@index']);
     });
 });
+
+Route::match(['get', 'post'], '/nonltiprofile', ['as' => 'nonlti.users.profile', 'uses' => 'Users\ProfileController@index']);
