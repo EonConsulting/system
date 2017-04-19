@@ -8,7 +8,7 @@
                 </form>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">Enter email addresses to notify about this course <button @click="submit" type="button" class="btn btn-primary btn-xs pull-right">Save & Notify</button></div>
+                    <div class="panel-heading">Enter email addresses to notify about this module <button @click="submit" type="button" class="btn btn-primary btn-xs pull-right">Save & Notify</button></div>
                     <div class="panel-body">
                         <div class="input-group">
                             <input type="text" class="form-control" @keyup.enter.prevent="add_email" placeholder="Enter email here" v-model="current_email">

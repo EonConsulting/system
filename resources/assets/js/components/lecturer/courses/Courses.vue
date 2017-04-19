@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="panel panel-default">
-                <div class="panel-heading">Courses <div class="col-md-6 pull-right"><input type="text" id="txt_search" class="form-control" onkeyup="search()" placeholder="Search Courses.."></div><div class="clearfix"></div></div>
+                <div class="panel-heading">Modules <div class="col-md-6 pull-right"><input type="text" id="txt_search" class="form-control" onkeyup="search()" placeholder="Search Modules.."></div><div class="clearfix"></div></div>
                 <table class="panel-body table table-hover table-striped">
                     <thead>
                     <tr>

@@ -5,21 +5,21 @@
                 <input type="hidden" name="_token" id="login-token"/>
                 <div class="form-group">
                     <div class="col-md-8">
-                        <label>Course Title</label>
+                        <label>Module Title</label>
                         <input type="text" class="form-control" placeholder="Course Title" name="title" v-model="course_title" @keyup="make_course_slug">
                     </div>
                     <div class="col-md-4">
-                        <label>Course Slug</label>
+                        <label>Module Slug</label>
                         <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon3">courses/</span>
+                            <span class="input-group-addon" id="basic-addon3">modules/</span>
                             <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" disabled v-model="course_slug">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
-                        <label>Course Summary</label>
-                        <textarea class="form-control" name="description" placeholder="Course Summary" v-model="course_summary" rows="10"></textarea>
+                        <label>Module Summary</label>
+                        <textarea class="form-control" name="description" placeholder="Module Summary" v-model="course_summary" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
